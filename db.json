@@ -1,0 +1,132 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "name": "sofas",
+      "image": "sofas.png"
+    },
+    {
+      "id": 2,
+      "name": "chairs",
+      "image": "chairs.png"
+    },
+    {
+      "id": 3,
+      "name": "armchairs",
+      "image": "armchairs.png"
+    },
+    {
+      "id": 4,
+      "name": "beds",
+      "image": "beds.png"
+    },
+    {
+      "id": 5,
+      "name": "mattresses",
+      "image": "mattresses.png"
+    },
+    {
+      "id": 6,
+      "name": "poufs",
+      "image": "poufs.png"
+    },
+    {
+      "id": 7,
+      "name": "exclusiveFurnitures",
+      "image": "exclusiveFurnitures.png"
+    }
+  ],
+  "mebel": [
+    { "id": 1, "sofas": [] },
+    { "id": 2, "chairs": [] },
+    {
+      "id": 3,
+      "armchairs": [
+        {
+          "id": "1",
+          "name": "Martin",
+          "image": "Martin.png"
+        },
+        {
+          "id": "2",
+          "name": "Alba",
+          "image": "Alba.png"
+        },
+        {
+          "id": "3",
+          "name": "Toscana",
+          "image": "Toscana.png"
+        },
+        {
+          "id": "4",
+          "name": "Leonardo",
+          "image": "Leonardo.png"
+        },
+        {
+          "id": "5",
+          "name": "Boorbon",
+          "image": "Boorbon.png"
+        },
+        {
+          "id": "6",
+          "name": "Emilio",
+          "image": "Emilio.png"
+        },
+        {
+          "id": "7",
+          "name": "Nensi",
+          "image": "Nensi.png"
+        },
+        {
+          "id": "8",
+          "name": "Tatami",
+          "image": "Tatami.png"
+        },
+        {
+          "id": "9",
+          "name": "Regina",
+          "image": "Regina.png"
+        },
+        {
+          "id": "10",
+          "name": "Malta",
+          "image": "Malta.png"
+        },
+        {
+          "id": "11",
+          "name": "Versal",
+          "image": "Versal.png"
+        },
+        {
+          "id": "12",
+          "name": "Exclusive 1",
+          "image": "Exclusive 1.png"
+        },
+        {
+          "id": "13",
+          "name": "Floret",
+          "image": "Floret.png"
+        },
+        {
+          "id": "14",
+          "name": "Exclusive bed 2",
+          "image": "Exclusive bed 2.png"
+        },
+        {
+          "id": "15",
+          "name": "Arni",
+          "image": "Arni.png"
+        },
+        {
+          "id": "16",
+          "name": "Taiti",
+          "image": "Taiti.png"
+        }
+      ]
+    },
+    { "id": 4, "beds": [] },
+    { "id": 5, "mattresses": [] },
+    { "id": 6, "poufs": [] },
+    { "id": 7, "exclusiveFurnitures": [] }
+  ]
+}
