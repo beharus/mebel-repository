@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
 import logo from "./img/logotip.png";
-import { BsTelephone } from "react-icons/bs";
-import { VscThreeBars } from "react-icons/vsc";
+import open from "./img/menu.png";
+import phone from "./img/phone-call.png";
+import { GrClose } from "react-icons/gr";
 
 function Navbar(props) {
   return (
@@ -73,20 +74,61 @@ function Navbar(props) {
             </select>
           </div>
           <div className="menu-btn i1 item">
-            <i class="">
-              <BsTelephone />
+            <i
+              class=""
+              onClick={() => {
+                document
+                  .querySelector(".navbar .md i .menu-numb-md")
+                  .classList.toggle("active");
+              }}
+            >
+              <img src={phone} alt="" />
+              <div
+                onClick={() => document.querySelector('.menu-numb-md').select()}
+                className="menu-numb-md"
+                id="call"
+              >
+                +38 (099)-638-45-37
+              </div>
             </i>
           </div>
           <div className="menu-btn i2 item">
-            <i className="">
-              <VscThreeBars />
+            <i
+              className=""
+              onClick={() => {
+                document
+                  .querySelector(".navbar .md .md-menu")
+                  .classList.add("active");
+              }}
+            >
+              <img src={open} alt="" />
             </i>
 
             <div className="md-menu">
-              <div className="md-menu-item">
-                <a href="">
+              <div className="ms-menu-content">
+                <div className="md-menu-item">
                   <div className="category-content">
-                    <button>Каталог</button>
+                    <i
+                      className="close"
+                      onClick={() => {
+                        document
+                          .querySelector(".navbar .md .md-menu")
+                          .classList.remove("active");
+                      }}
+                    >
+                      <GrClose />
+                    </i>
+                    <button
+                      onClick={() => {
+                        document
+                          .querySelector(
+                            ".navbar .md .md-menu .md-menu-item .category-content ul"
+                          )
+                          .classList.toggle("active");
+                      }}
+                    >
+                      Каталог
+                    </button>
                     <ul>
                       <li>
                         <a href="">Диваны </a>
@@ -109,18 +151,24 @@ function Navbar(props) {
                       <li>
                         <a href="">2D-3D модели</a>
                       </li>
+                      <li>
+                        <a href="">Страница партнеров дизайнеров</a>
+                      </li>
+                      <li>
+                        <a href="">Дилерам </a>
+                      </li>
                     </ul>
                   </div>
-                </a>
-              </div>
-              <div className="md-menu-item">
-                <a href="">Индивидуальная мебель</a>
-              </div>
-              <div className="md-menu-item">
-                <a href="">Контакты</a>
-              </div>
-              <div className="md-menu-item">
-                <a href="">О компании</a>
+                </div>
+                <div className="md-menu-item">
+                  <a href="">Индивидуальная мебель</a>
+                </div>
+                <div className="md-menu-item">
+                  <a href="">Контакты</a>
+                </div>
+                <div className="md-menu-item end">
+                  <a href="">О компании</a>
+                </div>
               </div>
             </div>
           </div>
