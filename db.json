@@ -2,46 +2,46 @@
   "catalog": [
     {
       "id": 1,
-      "name": "sofas",
+      "name": "Диваны",
       "image": "sofas.png"
     },
     {
       "id": 2,
-      "name": "chairs",
+      "name": "Стулья",
       "image": "chairs.png"
     },
     {
       "id": 3,
-      "name": "armchairs",
+      "name": "Кресла",
       "image": "armchairs.png"
     },
     {
       "id": 4,
-      "name": "beds",
+      "name": "Кровати",
       "image": "beds.png"
     },
     {
       "id": 5,
-      "name": "mattresses",
+      "name": "Матрацы",
       "image": "mattresses.png"
     },
     {
       "id": 6,
-      "name": "poufs",
+      "name": "Пуфы",
       "image": "poufs.png"
     },
     {
       "id": 7,
-      "name": "exclusiveFurnitures",
+      "name": "Эксклюзивная мебель",
       "image": "exclusiveFurnitures.png"
     }
   ],
   "mebel": [
-    { "id": 1, "sofas": [] },
-    { "id": 2, "chairs": [] },
+    { "id": 1, "Диваны": [] },
+    { "id": 2, "Стулья": [] },
     {
       "id": 3,
-      "armchairs": [
+      "Кресла": [
         {
           "id": "1",
           "name": "Martin",
@@ -124,9 +124,9 @@
         }
       ]
     },
-    { "id": 4, "beds": [] },
-    { "id": 5, "mattresses": [] },
-    { "id": 6, "poufs": [] },
-    { "id": 7, "exclusiveFurnitures": [] }
+    { "id": 4, "Кровати": [] },
+    { "id": 5, "Матрацы": [] },
+    { "id": 6, "Пуфы": [] },
+    { "id": 7, "Эксклюзивная мебель": [] }
   ]
 }

@@ -3,13 +3,13 @@ import useHttp from "../../hook/useHttp";
 
 const initialState = {
   mebel: [
-    { sofas: [] },
-    { chairs: [] },
-    { armchairs: [] },
-    { beds: [] },
-    { mattresses: [] },
-    { poufs: [] },
-    { exclusiveFurnitures: [] },
+    { Диваны: [] },
+    { Стулья: [] },
+    { Кресла: [] },
+    { Кровати: [] },
+    { Матрацы: [] },
+    { Пуфы: [] },
+    { ЭксклюзивнаяМебель: [] },
   ],
   mebelLoading: "success",
   filteredMebel: [],

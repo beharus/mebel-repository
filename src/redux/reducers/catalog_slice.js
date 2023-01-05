@@ -4,7 +4,7 @@ import useHttp from "../../hook/useHttp";
 const initialState = {
   catalog: [],
   catalogLoading: "success",
-  catalogStatus: "armchairs",
+  catalogStatus: "Кресла",
 };
 
 export const fetchCatalog = createAsyncThunk(
@@ -21,6 +21,9 @@ export const catalogSlice = createSlice({
   reducers: {
     setCatalog(state, action) {
       state.catalog = action.payload;
+    },
+    setCatalogStatus(state, action) {
+      state.catalogStatus = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -39,5 +42,5 @@ export const catalogSlice = createSlice({
   },
 });
 
-export const { setCatalog } = catalogSlice.actions;
+export const { setCatalog, setCatalogStatus } = catalogSlice.actions;
 export default catalogSlice.reducer;
