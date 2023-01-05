@@ -1,0 +1,48 @@
+.footer {
+  width: 100%;
+  padding: 5.5% 9.5% 30px;
+  background: #5b5b5b;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+.footer li {
+  list-style: none;
+  margin-bottom: 25px;
+}
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.16em;
+  text-transform: capitalize;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 150%;
+  transition: 0.5s;
+}
+.footer a:hover {
+  color: #ff9619;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    display: grid;
+    grid-column: 50%, 50%;
+  }
+  .footer .logo {
+    order: 4;
+  }
+  .footer .col1 {
+    order: 1;
+  }
+  .footer .col2 {
+    order: 2;
+  }
+  .footer .col3 {
+    order: 3;
+  }
+}
