@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCatalog } from "../redux/reducers/catalog_slice";
-import { fetchMebel } from "../redux/reducers/mebel_slice";
-import CatalogList from "./CatalogList";
-import Error from "./Error";
-import MebelList from "./MebelList";
-import Search from "./Search";
-import Loader from "./Loader";
+import { fetchCatalog } from "../../redux/reducers/catalog_slice";
+import { fetchMebel } from "../../redux/reducers/mebel_slice";
+import CatalogList from "../catalogList";
+import Error from "../error";
+import MebelList from "../mebelList";
+import Search from "../search";
+import Loader from "../loader";
 
 function Main() {
   const { catalogLoading } = useSelector((state) => state.catalog);
@@ -20,7 +20,7 @@ function Main() {
   }, []);
 
   return (
-    <div className="main">
+    <div className="main container">
       {catalogLoading === "loading" ? (
         <Loader />
       ) : catalogLoading === "error" ? (

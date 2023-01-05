@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { handleKey } from "../redux/actions";
-import { setSearch } from "../redux/reducers/mebel_slice";
+import { handleKey } from "../../redux/actions";
+import { setSearch } from "../../redux/reducers/mebel_slice";
 
 function Search() {
   const { search } = useSelector((state) => state.mebel);

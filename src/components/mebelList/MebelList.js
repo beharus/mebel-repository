@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import MebelItem from "./MebelItem";
-import { setFilterdMebelList } from "../redux/actions";
+import MebelItem from "../mebelItem";
+import { setFilterdMebelList } from "../../redux/actions";
 
 function MebelList() {
   const { mebel, filteredMebel, search } = useSelector((state) => state.mebel);
@@ -14,7 +14,7 @@ function MebelList() {
   }, [search]);
 
   return filteredMebel ? (
-    <div className="mebel-list">
+    <div className="row row-cols-2 row-cols-md-4 g-4 mebel-list">
       {filteredMebel.map((elem) => (
         <MebelItem key={elem.id} {...elem} />
       ))}
