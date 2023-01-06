@@ -1,6 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 function CatalogItem({ name, image }) {
+  const { catalogStatus } = useSelector((state) => state.catalog);
+  const clas =
+    name === catalogStatus
+      ? "card-title text-center activeStatus"
+      : "card-title text-center";
   return (
     <div className="col">
       <div className="card category-item">
@@ -11,7 +17,7 @@ function CatalogItem({ name, image }) {
         />
         <div className="card-body"></div>
         <div className="card-footer">
-          <h5 className="card-title text-center">{name}</h5>
+          <h5 className={clas}>{name}</h5>
         </div>
       </div>
     </div>

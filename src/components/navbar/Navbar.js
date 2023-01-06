@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css";
+import "./navbar.css";
 import logo from "./img/logotip.png";
 import open from "./img/menu.png";
 import phone from "./img/phone-call.png";
 import { GrClose } from "react-icons/gr";
 
-function Navbar(props) {
+function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-content">
@@ -22,40 +22,40 @@ function Navbar(props) {
           <div className="category-content">
             <ul>
               <li>
-                <a href="">Диваны </a>
+                <a href="!#">Диваны </a>
               </li>
               <li>
-                <a href="">Кресла </a>
+                <a href="!#">Кресла </a>
               </li>
               <li>
-                <a href="">Стулья </a>
+                <a href="!#">Стулья </a>
               </li>
               <li>
-                <a href="">Матрацы </a>
+                <a href="!#">Матрацы </a>
               </li>
               <li>
-                <a href="">Пуфы </a>
+                <a href="!#">Пуфы </a>
               </li>
               <li>
-                <a href="">Эксклюзивная мебель</a>
+                <a href="!#">Эксклюзивная мебель</a>
               </li>
               <li>
-                <a href="">2D-3D модели</a>
+                <a href="!#">2D-3D модели</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="menu-item">
-          <a href="">Индивидуальная мебель</a>
+          <a href="!#">Индивидуальная мебель</a>
         </div>
         <div className="menu-item">
-          <a href="">Контакты</a>
+          <a href="!#">Контакты</a>
         </div>
         <div className="logo">
           <img src={logo} alt="" />
         </div>
         <div className="menu-item">
-          <a href="">О компании</a>
+          <a href="!#">О компании</a>
         </div>
         <div className="menu-numb">+38 (099)-638-45-37</div>
         <div className="lang lang-lg">
@@ -84,7 +84,7 @@ function Navbar(props) {
             >
               <img src={phone} alt="" />
               <div
-                onClick={() => document.querySelector('.menu-numb-md').select()}
+                onClick={() => document.querySelector(".menu-numb-md").select()}
                 className="menu-numb-md"
                 id="call"
               >
@@ -131,43 +131,43 @@ function Navbar(props) {
                     </button>
                     <ul>
                       <li>
-                        <a href="">Диваны </a>
+                        <a href="!#">Диваны </a>
                       </li>
                       <li>
-                        <a href="">Кресла </a>
+                        <a href="!#">Кресла </a>
                       </li>
                       <li>
-                        <a href="">Стулья </a>
+                        <a href="!#">Стулья </a>
                       </li>
                       <li>
-                        <a href="">Матрацы </a>
+                        <a href="!#">Матрацы </a>
                       </li>
                       <li>
-                        <a href="">Пуфы </a>
+                        <a href="!#">Пуфы </a>
                       </li>
                       <li>
-                        <a href="">Эксклюзивная мебель</a>
+                        <a href="!#">Эксклюзивная мебель</a>
                       </li>
                       <li>
-                        <a href="">2D-3D модели</a>
+                        <a href="!#">2D-3D модели</a>
                       </li>
                       <li>
-                        <a href="">Страница партнеров дизайнеров</a>
+                        <a href="!#">Страница партнеров дизайнеров</a>
                       </li>
                       <li>
-                        <a href="">Дилерам </a>
+                        <a href="!#">Дилерам </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div className="md-menu-item">
-                  <a href="">Индивидуальная мебель</a>
+                  <a href="!#">Индивидуальная мебель</a>
                 </div>
                 <div className="md-menu-item">
-                  <a href="">Контакты</a>
+                  <a href="!#">Контакты</a>
                 </div>
                 <div className="md-menu-item end">
-                  <a href="">О компании</a>
+                  <a href="!#">О компании</a>
                 </div>
               </div>
             </div>
