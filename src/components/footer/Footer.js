@@ -1,12 +1,12 @@
 import React from "react";
-import "./style.css";
+import "./footer.css";
 import logo from "../navbar/img/logo-w.png";
 import x from "../navbar/img/x.png";
 import instagram from "../navbar/img/instagram.png";
 import facebook from "../navbar/img/facebook.png";
 import arrow from "../navbar/img/Arrow 1.png";
 
-function Footer(props) {
+function Footer() {
   return (
     <div className="footer-content">
       <div className="footer">
@@ -15,19 +15,19 @@ function Footer(props) {
         </div>
         <div className="col1">
           <li>
-            <a href="">Каталог </a>
+            <a href="!#">Каталог</a>
           </li>
           <li>
-            <a href="">о компании </a>
+            <a href="!#">о компании </a>
           </li>
           <li>
-            <a href="">
+            <a href="!#">
               Индивидуальная <br />
               мебель{" "}
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="!#">
               Партнерам <br />
               дизайнерам{" "}
             </a>
@@ -35,27 +35,27 @@ function Footer(props) {
         </div>
         <div className="col2">
           <li>
-            <a href="">2D, 3D модели </a>
+            <a href="!#">2D, 3D модели </a>
           </li>
           <li>
-            <a href="">Шоу-румы </a>
+            <a href="!#">Шоу-румы </a>
           </li>
           <li>
-            <a href="">Дилерам </a>
+            <a href="!#">Дилерам </a>
           </li>
           <li>
-            <a href="">Контакты </a>
+            <a href="!#">Контакты </a>
           </li>
           <li>
-            <a href="">Конфигуратор </a>
+            <a href="!#">Конфигуратор </a>
           </li>
         </div>
         <div className="col3">
           <div className="flex">
-            <a href="">
+            <a href="!#">
               <img src={instagram} alt="" />
             </a>
-            <a href="">
+            <a href="!#">
               <img src={facebook} alt="" />
             </a>
           </div>
@@ -72,16 +72,16 @@ function Footer(props) {
       </div>
       <p>© 1993–2021 Интернет-магазин «EKMI™» — меблі</p>
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">
                 <span>Заполните форму</span>
                 <br />
                 остались вопросы?
@@ -94,7 +94,7 @@ function Footer(props) {
                 alt=""
               />
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <form>
                 <input type="text" placeholder="Ваше имя*" />
                 <br />
@@ -112,8 +112,8 @@ function Footer(props) {
                 </p>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary">
                 запросить звонок
               </button>
             </div>
