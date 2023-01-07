@@ -13,9 +13,9 @@ function Search() {
 
   return (
     <div className="row d-flex align-items-center justify-content-between my-5 search">
-      <div className="col-4 d-flex justify-content-start">
+      <div className="col-md-4 col-7 d-flex justify-content-start">
         <select
-          className="form-select w-50"
+          className="form-select md:w-10/12 sm:w-4/5"
           aria-label="Default select example"
         >
           <option defaultValue="">Все 2D-3D модели</option>
@@ -30,40 +30,41 @@ function Search() {
         </select>
       </div>
 
-      <div className="col-4 d-flex justify-content-center">
+      <div className="col-md-5 col-5 d-flex justify-end ">
         <div
-          className="responsive-filterable active"
+          className="group cursor-pointer responsive-filterable active"
           id="responsive-filterable"
         >
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
         </div>
-        <div className="responsive-filterable-2x2">
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
-          <div className="rectangle bg-dark"></div>
+        <div className=" group cursor-pointer responsive-filterable-2x2">
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
         </div>
       </div>
 
-      <div className="col-4 d-flex justify-content-end">
-        <InputGroup className="">
-          <Form.Control
+      <div className="col-md-3 md:m-auto mt-[30px] col-12 d-flex justify-center md:justify-end">
+        <div className=" w-9/12 py-[6px] px-3 flex border-[#343434] border text-[#D1D1D1]">
+          <input
             type="search"
             placeholder="Поиск"
             aria-label="Поиск"
             aria-describedby="basic-addon2"
             value={search}
+            className=" text-[#D1D1D1] w-full outline-none border-r-none rounded-none"
             onChange={(e) => dispatch(setSearch(e.target.value))}
             onKeyDown={(e) => dispatch(handleKey(e, search))}
           />
-          <InputGroup.Text id="basic-addon2">
+          <button className=" border-l-none bg-transparent" id="basic-addon2">
             <svg
               width="20"
               height="19"
@@ -78,8 +79,8 @@ function Search() {
                 fill="#343434"
               />
             </svg>
-          </InputGroup.Text>
-        </InputGroup>
+          </button>
+        </div>
       </div>
     </div>
   );

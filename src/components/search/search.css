@@ -63,11 +63,12 @@ input[type="number"]:focus,
 }
 .form-control {
   border-radius: 0px !important;
-  border: 1px solid #000 !important;
-  border-right: 1px solid #fff !important;
+  border-right: none !important;
+  outline: none !important;
 }
 .input-group-text {
-  background: #ffffff !important;
-  border: 1px solid #000 !important;
+  border-left: none !important;
   border-radius: 0px !important;
+  cursor: pointer;
+  outline: none !important;
 }
