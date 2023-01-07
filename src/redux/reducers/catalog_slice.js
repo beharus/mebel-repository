@@ -4,7 +4,8 @@ import useHttp from "../../hook/useHttp";
 const initialState = {
   catalog: [],
   catalogLoading: "success",
-  catalogStatus: "Кресла",
+  catalogFilter: "Кресла",
+  catalogActive: "4x",
   filteredCatalog: [],
   search: "",
 };

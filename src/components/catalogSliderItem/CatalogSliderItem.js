@@ -3,10 +3,10 @@ import "./catalogSliderItem.css";
 import { useSelector } from "react-redux";
 
 function CatalogSliderItem({ name, image }) {
-  const { catalogStatus } = useSelector((state) => state.catalog);
+  const { catalogFilter } = useSelector((state) => state.catalog);
   const clas =
-    name === catalogStatus
-      ? "card-title text-center activeStatus"
+    name === catalogFilter
+      ? "card-title text-center activeFilter"
       : "card-title text-center";
   return (
     <div className="col d-flex">

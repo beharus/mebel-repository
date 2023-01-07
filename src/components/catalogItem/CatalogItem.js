@@ -6,7 +6,7 @@ function CatalogItem({ name, image }) {
       <div className=" mebel-item">
         <div className="cursor-pointer w-full relative">
           <img
-            src={require(`../../images/mebel_images/${image}`)}
+            src={require(`../../images/catalog_images/${image}`)}
             className="object-cover w-full"
             alt="img"
           />

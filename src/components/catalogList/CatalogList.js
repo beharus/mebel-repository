@@ -4,14 +4,14 @@ import CatalogItem from "../catalogItem";
 import { filterdCatalogList } from "../../redux/actions";
 
 function MebelList() {
-  const { catalog, catalogStatus, filteredCatalog, search } = useSelector(
+  const { catalog, catalogFilter, filteredCatalog, search } = useSelector(
     (state) => state.catalog
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (catalog.length) {
-      dispatch(filterdCatalogList(catalog, catalogStatus, search));
+      dispatch(filterdCatalogList(catalog, catalogFilter, search));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);

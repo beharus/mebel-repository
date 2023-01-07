@@ -1,12 +1,11 @@
 import React from "react";
 import "./search.css";
-import { Form, InputGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { handleKey } from "../../redux/actions";
 import { setSearch } from "../../redux/reducers/catalog_slice";
 
 function Search() {
-  const { catalog, catalogStatus, search } = useSelector(
+  const { catalog, catalogFilter, search } = useSelector(
     (state) => state.catalog
   );
   const dispatch = useDispatch();
@@ -20,7 +19,7 @@ function Search() {
         >
           <option defaultValue="">Все 2D-3D модели</option>
           {catalog.map((item) => {
-            const clas = item.name === catalogStatus ? "activeStatus" : "";
+            const clas = item.name === catalogFilter ? "activeFilter" : "";
             return (
               <option key={item.id} value={item.id} className={clas}>
                 {item.name}
