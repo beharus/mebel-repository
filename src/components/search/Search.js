@@ -11,7 +11,7 @@ function Search() {
   const dispatch = useDispatch();
 
   return (
-    <div className="row d-flex align-items-center justify-content-between my-5">
+    <div className="row d-flex align-items-center justify-content-between my-5 search">
       <div className="col-4 d-flex justify-content-start">
         <select
           className="form-select w-50"
