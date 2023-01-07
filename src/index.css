@@ -2,3 +2,6 @@
 .activeStatus {
   color: #ff9619;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

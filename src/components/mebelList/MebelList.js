@@ -14,7 +14,7 @@ function MebelList() {
   }, [search]);
 
   return filteredMebel ? (
-    <div className="row row-cols-2 row-cols-md-4 g-4 mebel-list">
+    <div className=" grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list">
       {filteredMebel.map((elem) => (
         <MebelItem key={elem.id} {...elem} />
       ))}
