@@ -5,6 +5,8 @@ const initialState = {
   catalog: [],
   catalogLoading: "success",
   catalogStatus: "Кресла",
+  filteredCatalog: [],
+  search: "",
 };
 
 export const fetchCatalog = createAsyncThunk(
@@ -25,6 +27,12 @@ export const catalogSlice = createSlice({
     setCatalogStatus(state, action) {
       state.catalogStatus = action.payload;
     },
+    setFilteredCatalog(state, action) {
+      state.filteredCatalog = action.payload;
+    },
+    setSearch(state, action) {
+      state.search = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -42,5 +50,6 @@ export const catalogSlice = createSlice({
   },
 });
 
-export const { setCatalog, setCatalogStatus } = catalogSlice.actions;
 export default catalogSlice.reducer;
+export const { setCatalog, setCatalogStatus, setFilteredCatalog, setSearch } =
+  catalogSlice.actions;

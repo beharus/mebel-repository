@@ -1,26 +1,20 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import './catalogitem.css'
 
 function CatalogItem({ name, image }) {
-  const { catalogStatus } = useSelector((state) => state.catalog);
-  const clas =
-    name === catalogStatus
-      ? "card-title text-center activeStatus"
-      : "card-title text-center";
   return (
-    <div className="col d-flex">
-      <div className="card category-item">
-
-        <div className="card-body">
+    <div className=" lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6">
+      <div className=" mebel-item">
+        <div className="cursor-pointer w-full relative">
           <img
-            src={require(`../../images/catalog_images/${image}`)}
-            className="card-img-top img-fluid"
+            src={require(`../../images/mebel_images/${image}`)}
+            className="object-cover w-full"
             alt="img"
           />
         </div>
         <div className="card-footer">
-          <h5 className={clas}>{name}</h5>
+          <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase text-[#343434] mt-[22px] card-title text-center">
+            {name}
+          </h5>
         </div>
       </div>
     </div>

@@ -1,19 +1,30 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import CatalogItem from "../catalogItem";
+import { filterdCatalogList } from "../../redux/actions";
 
-function CatalogList() {
-  const { catalog } = useSelector((state) => state.catalog);
+function MebelList() {
+  const { catalog, catalogStatus, filteredCatalog, search } = useSelector(
+    (state) => state.catalog
+  );
+  const dispatch = useDispatch();
 
-  return catalog ? (
-    <div className="row row-cols-1 row-cols-md-6 g-4 catalog-list">
-      {catalog.map((item) => {
-        return <CatalogItem key={item.id} {...item} />;
-      })}
+  useEffect(() => {
+    if (catalog.length) {
+      dispatch(filterdCatalogList(catalog, catalogStatus, search));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
+
+  return filteredCatalog ? (
+    <div className=" grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list">
+      {filteredCatalog.map((elem) => (
+        <CatalogItem key={elem.id} {...elem} />
+      ))}
     </div>
   ) : (
     <h1>Nothing here</h1>
   );
 }
 
-export default CatalogList;
+export default MebelList;

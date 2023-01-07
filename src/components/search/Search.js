@@ -3,11 +3,12 @@ import "./search.css";
 import { Form, InputGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { handleKey } from "../../redux/actions";
-import { setSearch } from "../../redux/reducers/mebel_slice";
+import { setSearch } from "../../redux/reducers/catalog_slice";
 
 function Search() {
-  const { catalog, catalogStatus } = useSelector((state) => state.catalog);
-  const { search } = useSelector((state) => state.mebel);
+  const { catalog, catalogStatus, search } = useSelector(
+    (state) => state.catalog
+  );
   const dispatch = useDispatch();
 
   return (

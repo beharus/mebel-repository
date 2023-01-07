@@ -75,7 +75,7 @@ function Navbar() {
           </div>
           <div className="menu-btn i1 item">
             <i
-              class=""
+              className=""
               onClick={() => {
                 document
                   .querySelector(".navbar .md i .menu-numb-md")

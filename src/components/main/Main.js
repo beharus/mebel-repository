@@ -1,21 +1,18 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCatalog } from "../../redux/reducers/catalog_slice";
-import { fetchMebel } from "../../redux/reducers/mebel_slice";
-import CatalogList from "../catalogList";
+import CatalogSlider from "../catalogSlider";
 import Error from "../error";
-import MebelList from "../mebelList";
 import Search from "../search";
 import Loader from "../loader";
+import CatalogList from "../catalogList";
 
 function Main() {
   const { catalogLoading } = useSelector((state) => state.catalog);
-  const { mebelLoading } = useSelector((state) => state.mebel);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCatalog());
-    dispatch(fetchMebel());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -26,15 +23,15 @@ function Main() {
       ) : catalogLoading === "error" ? (
         <Error />
       ) : (
-        <CatalogList />
+        <CatalogSlider />
       )}
       <Search />
-      {mebelLoading === "loading" ? (
+      {catalogLoading === "loading" ? (
         <Loader />
-      ) : mebelLoading === "error" ? (
+      ) : catalogLoading === "error" ? (
         <Error />
       ) : (
-        <MebelList />
+        <CatalogList />
       )}
     </div>
   );

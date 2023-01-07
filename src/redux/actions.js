@@ -1,15 +1,12 @@
-import { setFilteredMebel, setSearch } from "./reducers/mebel_slice";
+import { setFilteredCatalog, setSearch } from "./reducers/catalog_slice";
 
-export const setFilterdMebelList =
-  (mebel, catalogStatus, search) => (dispatch) => {
-    const elements = mebel.filter((item) => {
-      for (const [key, value] of Object.entries(item)) {
-        if (key === catalogStatus) return value;
-      }
-    })[0][catalogStatus];
+export const filterdCatalogList =
+  (catalog, catalogStatus, search) => (dispatch) => {
+    const elements = catalog.filter((item) => item.name === catalogStatus)[0]
+      .value;
 
     dispatch(
-      setFilteredMebel(
+      setFilteredCatalog(
         search
           ? elements.filter((item) =>
               item.name.toLowerCase().startsWith(search.toLowerCase())
