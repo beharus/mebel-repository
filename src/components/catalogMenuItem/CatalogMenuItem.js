@@ -1,5 +1,5 @@
 import React from "react";
-import "./catalogSliderItem.css";
+import "./catalogMenuItem.css";
 import { useSelector } from "react-redux";
 
 function CatalogSliderItem({ name, image }) {
@@ -13,7 +13,7 @@ function CatalogSliderItem({ name, image }) {
       <div className="card category-item">
         <div className="card-body">
           <img
-            src={require(`../../images/catalog_images/${image}`)}
+            src={require(`./images/${image}`)}
             className="card-img-top img-fluid"
             alt="img"
           />

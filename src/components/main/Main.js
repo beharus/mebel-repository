@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCatalog } from "../../redux/reducers/catalog_slice";
-import CatalogSlider from "../catalogSlider";
 import Error from "../error";
 import Search from "../search";
 import Loader from "../loader";
 import CatalogList from "../catalogList";
+import CatalogMenu from "../catalogMenu/CatalogMenu";
 
 function Main() {
   const { catalogLoading } = useSelector((state) => state.catalog);
@@ -23,7 +23,7 @@ function Main() {
       ) : catalogLoading === "error" ? (
         <Error />
       ) : (
-        <CatalogSlider />
+        <CatalogMenu />
       )}
       <Search />
       {catalogLoading === "loading" ? (

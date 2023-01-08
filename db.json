@@ -3,19 +3,19 @@
     {
       "id": 1,
       "name": "Диваны",
-      "image": "sofas.png",
+      "image": "Диваны.png",
       "value": []
     },
     {
       "id": 2,
       "name": "Стулья",
-      "image": "chairs.png",
+      "image": "Стулья.png",
       "value": []
     },
     {
       "id": 3,
       "name": "Кресла",
-      "image": "armchairs.png",
+      "image": "Кресла.png",
       "value": [
         {
           "id": "1",
@@ -118,25 +118,25 @@
     {
       "id": 4,
       "name": "Кровати",
-      "image": "beds.png",
+      "image": "Кровати.png",
       "value": []
     },
     {
       "id": 5,
       "name": "Матрацы",
-      "image": "mattresses.png",
+      "image": "Матрацы.png",
       "value": []
     },
     {
       "id": 6,
       "name": "Пуфы",
-      "image": "poufs.png",
+      "image": "Пуфы.png",
       "value": []
     },
     {
       "id": 7,
       "name": "Эксклюзивная мебель",
-      "image": "exclusiveFurnitures.png",
+      "image": "Эксклюзивная мебель.png",
       "value": []
     }
   ]

@@ -2,19 +2,26 @@ import React from "react";
 import "./search.css";
 import { useDispatch, useSelector } from "react-redux";
 import { handleKey } from "../../redux/actions";
-import { setSearch } from "../../redux/reducers/catalog_slice";
+import {
+  setSearch,
+  setCatalogActive,
+} from "../../redux/reducers/catalog_slice";
 
 function Search() {
-  const { catalog, catalogFilter, search } = useSelector(
+  const { catalog, catalogFilter, catalogActive, search } = useSelector(
     (state) => state.catalog
   );
   const dispatch = useDispatch();
+  const arrFour = [1, 2, 3, 4, 5, 6, 7, 8];
+  const arrTwo = [1, 2, 3, 4];
+  let classFour = "rectangle group-hover:bg-black duration-200";
+  let classTwo = "rectangle group-hover:bg-black duration-200";
 
   return (
     <div className="row d-flex align-items-center justify-content-between my-5 search">
       <div className="col-md-4 col-7 d-flex justify-content-start">
         <select
-          className="form-select md:w-10/12 sm:w-4/5"
+          className="form-select lg:w-5/12 md:w-10/12 sm:w-4/5"
           aria-label="Default select example"
         >
           <option defaultValue="">Все 2D-3D модели</option>
@@ -31,35 +38,34 @@ function Search() {
 
       <div className="col-md-5 col-5 d-flex justify-end ">
         <div
-          className="group cursor-pointer responsive-filterable active"
-          id="responsive-filterable"
+          className="group cursor-pointer responsive-filterable"
+          onClick={() => dispatch(setCatalogActive(true))}
         >
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+          {arrFour.map((item) => {
+            classFour += catalogActive ? " bg-black" : " bg-[#F2F3F5]";
+            return <div key={item} className={classFour}></div>;
+          })}
         </div>
-        <div className=" group cursor-pointer responsive-filterable-2x2">
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
-          <div className="rectangle bg-[#F2F3F5] group-hover:bg-black duration-200"></div>
+        <div
+          className="group cursor-pointer responsive-filterable-2x2"
+          onClick={() => dispatch(setCatalogActive(false))}
+        >
+          {arrTwo.map((item) => {
+            classTwo += catalogActive ? " bg-[#F2F3F5]" : " bg-black";
+            return <div key={item} className={classTwo}></div>;
+          })}
         </div>
       </div>
 
       <div className="col-md-3 md:m-auto mt-[30px] col-12 d-flex justify-center md:justify-end">
-        <div className=" w-9/12 py-[6px] px-3 flex border-[#343434] border text-[#D1D1D1]">
+        <div className="w-9/12 py-[6px] px-3 flex border-[#343434] border">
           <input
             type="search"
             placeholder="Поиск"
             aria-label="Поиск"
             aria-describedby="basic-addon2"
             value={search}
-            className=" text-[#D1D1D1] w-full outline-none border-r-none rounded-none"
+            className="w-full outline-none border-r-none rounded-none"
             onChange={(e) => dispatch(setSearch(e.target.value))}
             onKeyDown={(e) => dispatch(handleKey(e, search))}
           />

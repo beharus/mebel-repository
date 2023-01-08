@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
+import "./catalogList.css";
 import { useDispatch, useSelector } from "react-redux";
 import CatalogItem from "../catalogItem";
 import { filterdCatalogList } from "../../redux/actions";
 
-function MebelList() {
-  const { catalog, catalogFilter, filteredCatalog, search } = useSelector(
-    (state) => state.catalog
-  );
+function CatalogList() {
+  const { catalog, catalogFilter, catalogActive, filteredCatalog, search } =
+    useSelector((state) => state.catalog);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,8 +16,11 @@ function MebelList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
+  let clas = "catalog-list";
+  clas += catalogActive ? " filterable-4x active" : " filterable-2x active";
+
   return filteredCatalog ? (
-    <div className=" grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list">
+    <div className={clas}>
       {filteredCatalog.map((elem) => (
         <CatalogItem key={elem.id} {...elem} />
       ))}
@@ -27,4 +30,4 @@ function MebelList() {
   );
 }
 
-export default MebelList;
+export default CatalogList;

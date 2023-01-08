@@ -5,7 +5,7 @@ const initialState = {
   catalog: [],
   catalogLoading: "success",
   catalogFilter: "Кресла",
-  catalogActive: "4x",
+  catalogActive: true,
   filteredCatalog: [],
   search: "",
 };
@@ -25,8 +25,11 @@ export const catalogSlice = createSlice({
     setCatalog(state, action) {
       state.catalog = action.payload;
     },
-    setCatalogStatus(state, action) {
-      state.catalogStatus = action.payload;
+    setCatalogFilter(state, action) {
+      state.catalogFilter = action.payload;
+    },
+    setCatalogActive(state, action) {
+      state.catalogActive = action.payload;
     },
     setFilteredCatalog(state, action) {
       state.filteredCatalog = action.payload;
@@ -52,5 +55,10 @@ export const catalogSlice = createSlice({
 });
 
 export default catalogSlice.reducer;
-export const { setCatalog, setCatalogStatus, setFilteredCatalog, setSearch } =
-  catalogSlice.actions;
+export const {
+  setCatalog,
+  setCatalogFilter,
+  setCatalogActive,
+  setFilteredCatalog,
+  setSearch,
+} = catalogSlice.actions;
