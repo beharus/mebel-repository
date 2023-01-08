@@ -4,11 +4,15 @@ import logo from "../navbar/img/logo-w.png";
 import x from "../navbar/img/x.png";
 import instagram from "../navbar/img/instagram.png";
 import facebook from "../navbar/img/facebook.png";
+import ekmi from "../navbar/img/ekmi.png";
 import arrow from "../navbar/img/Arrow 1.png";
 
 function Footer() {
   return (
-    <div className="footer-content">
+    <div className="footer-content relative">
+      <div>
+        <img className=" absolute right-[9.5%] -top-[94px]" src={ekmi} />
+      </div>
       <div className="footer">
         <div className="logo">
           <img src={logo} alt="" />
