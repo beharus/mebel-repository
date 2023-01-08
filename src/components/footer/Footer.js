@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="footer-content relative">
       <div>
-        <img className=" absolute right-[9.5%] -top-[94px]" src={ekmi} />
+        <img className=" md:w-[364px] w-[182px] absolute right-[9.5%] -top-[49px] md:-top-[94px]" src={ekmi} />
       </div>
       <div className="footer container">
         <div className="logo">
