@@ -6,6 +6,7 @@ import Error from "../error";
 import Search from "../search";
 import Loader from "../loader";
 import CatalogList from "../catalogList";
+import Contact from "../contact/Contact";
 
 function Main() {
   const { catalogLoading } = useSelector((state) => state.catalog);
@@ -17,22 +18,27 @@ function Main() {
   }, []);
 
   return (
-    <div className="main container">
-      {catalogLoading === "loading" ? (
-        <Loader />
-      ) : catalogLoading === "error" ? (
-        <Error />
-      ) : (
-        <CatalogSlider />
-      )}
-      <Search />
-      {catalogLoading === "loading" ? (
-        <Loader />
-      ) : catalogLoading === "error" ? (
-        <Error />
-      ) : (
-        <CatalogList />
-      )}
+    <div className="main">
+      <div className=" container">
+        {catalogLoading === "loading" ? (
+          <Loader />
+        ) : catalogLoading === "error" ? (
+          <Error />
+        ) : (
+          <CatalogSlider />
+        )}
+        <Search />
+        {catalogLoading === "loading" ? (
+          <Loader />
+        ) : catalogLoading === "error" ? (
+          <Error />
+        ) : (
+          <CatalogList />
+        )}
+      </div>
+      <div className=" mb-[18%]">
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -18,15 +18,15 @@ function MebelList() {
   }, [search]);
 
   return filteredCatalog ? (
-    <div className="container mt-20">
-      <div className=" grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list mb-[60px]">
+    <div className=" mt-20">
+      <div className="container grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list mb-[60px]">
         {filteredCatalog.map((elem) => (
           <CatalogItem key={elem.id} {...elem} />
         ))}
       </div>
 
       <div className=" flex justify-center mb-[160px]">
-        <Button text='смотреть все'/>
+        <Button text="смотреть все" />
       </div>
     </div>
   ) : (
