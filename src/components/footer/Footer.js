@@ -4,12 +4,15 @@ import logo from "../navbar/img/logo-w.png";
 import x from "../navbar/img/x.png";
 import instagram from "../navbar/img/instagram.png";
 import facebook from "../navbar/img/facebook.png";
-import arrow from "../navbar/img/Arrow 1.png";
+import ekmi from "../navbar/img/ekmi.png";
 
 function Footer() {
   return (
-    <div className="footer-content">
-      <div className="footer">
+    <div className="footer-content relative">
+      <div>
+        <img className=" md:w-[364px] w-[182px] absolute right-[9.5%] -top-[49px] md:-top-[94px]" src={ekmi} />
+      </div>
+      <div className="footer container">
         <div className="logo">
           <img src={logo} alt="" />
         </div>
@@ -66,7 +69,6 @@ function Footer() {
             type="button"
           >
             <span>Персональная консультация</span>
-            <img src={arrow} alt="" />
           </button>
         </div>
       </div>

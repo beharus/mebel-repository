@@ -6,6 +6,7 @@ import Search from "../search";
 import Loader from "../loader";
 import CatalogList from "../catalogList";
 import CatalogMenu from "../catalogMenu/CatalogMenu";
+import Contact from "../contact/Contact";
 
 function Main() {
   const { catalogLoading } = useSelector((state) => state.catalog);
@@ -33,6 +34,9 @@ function Main() {
       ) : (
         <CatalogList />
       )}
+      <div className=" mb-[18%]">
+        <Contact />
+      </div>
     </div>
   );
 }
