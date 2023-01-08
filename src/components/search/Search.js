@@ -52,14 +52,14 @@ function Search() {
       </div>
 
       <div className="col-md-3 md:m-auto mt-[30px] col-12 d-flex justify-center md:justify-end">
-        <div className=" w-9/12 py-[6px] px-3 flex border-[#343434] border text-[#D1D1D1]">
+        <div className=" w-9/12 py-[6px] px-3 flex border-[#343434] border ">
           <input
             type="search"
             placeholder="Поиск"
             aria-label="Поиск"
             aria-describedby="basic-addon2"
             value={search}
-            className=" text-[#D1D1D1] w-full outline-none border-r-none rounded-none"
+            className=" placeholder:text-[#D1D1D1] text-[#343434] w-full outline-none border-r-none rounded-none"
             onChange={(e) => dispatch(setSearch(e.target.value))}
             onKeyDown={(e) => dispatch(handleKey(e, search))}
           />

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CatalogItem from "../catalogItem";
 import { filterdCatalogList } from "../../redux/actions";
+import Button from "../button/Button";
 
 function MebelList() {
   const { catalog, catalogFilter, filteredCatalog, search } = useSelector(
@@ -17,10 +18,16 @@ function MebelList() {
   }, [search]);
 
   return filteredCatalog ? (
-    <div className=" grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list">
-      {filteredCatalog.map((elem) => (
-        <CatalogItem key={elem.id} {...elem} />
-      ))}
+    <div className="container mt-20">
+      <div className=" grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list mb-[60px]">
+        {filteredCatalog.map((elem) => (
+          <CatalogItem key={elem.id} {...elem} />
+        ))}
+      </div>
+
+      <div className=" flex justify-center mb-[160px]">
+        <Button text='смотреть все'/>
+      </div>
     </div>
   ) : (
     <h1>Nothing here</h1>
