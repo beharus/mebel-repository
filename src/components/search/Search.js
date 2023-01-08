@@ -11,10 +11,10 @@ function Search() {
   const dispatch = useDispatch();
 
   return (
-    <div className="row d-flex align-items-center justify-content-between my-5 search">
+    <div className="row d-flex align-items-center justify-content-between search my-20">
       <div className="col-md-4 col-7 d-flex justify-content-start">
         <select
-          className="form-select md:w-10/12 sm:w-4/5"
+          className="form-select cursor-pointer border-none w-fit"
           aria-label="Default select example"
         >
           <option defaultValue="">Все 2D-3D модели</option>
