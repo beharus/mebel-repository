@@ -18,25 +18,27 @@ function Main() {
   }, []);
 
   return (
-    <div className="main container">
-      {catalogLoading === "loading" ? (
-        <Loader />
-      ) : catalogLoading === "error" ? (
-        <Error />
-      ) : (
-        <CatalogMenu />
-      )}
-      <Search />
-      {catalogLoading === "loading" ? (
-        <Loader />
-      ) : catalogLoading === "error" ? (
-        <Error />
-      ) : (
-        <CatalogList />
-      )}
-      <div className=" mb-[18%]">
-        <Contact />
+    <div>
+      <div className="main container">
+        {catalogLoading === "loading" ? (
+          <Loader />
+        ) : catalogLoading === "error" ? (
+          <Error />
+        ) : (
+          <CatalogMenu />
+        )}
+        <Search />
+        {catalogLoading === "loading" ? (
+          <Loader />
+        ) : catalogLoading === "error" ? (
+          <Error />
+        ) : (
+          <CatalogList />
+        )}
       </div>
+        <div className=" my-[18%]">
+          <Contact />
+        </div>
     </div>
   );
 }

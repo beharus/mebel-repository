@@ -1,11 +1,1 @@
-.filterable-4x {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 1rem;
-}
 
-.filterable-2x {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 1rem;
-}

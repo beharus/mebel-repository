@@ -17,7 +17,9 @@ function CatalogList() {
   }, [search]);
 
   let clas = "catalog-list";
-  clas += catalogActive ? " filterable-4x active" : " filterable-2x active";
+  clas += catalogActive
+    ? " grid grid-cols-12 gap-x-[30px] gap-y-[40px] mebel-list active"
+    : " grid grid-cols-6 gap-x-[30px] gap-y-[40px] mebel-list active";
 
   return filteredCatalog ? (
     <div className={clas}>
