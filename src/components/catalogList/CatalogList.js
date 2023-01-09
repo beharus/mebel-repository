@@ -3,6 +3,7 @@ import "./catalogList.css";
 import { useDispatch, useSelector } from "react-redux";
 import CatalogItem from "../catalogItem";
 import { filterdCatalogList } from "../../redux/actions";
+import Button from "../button/Button";
 
 function CatalogList() {
   const { catalog, catalogFilter, catalogActive, filteredCatalog, search } =
@@ -22,10 +23,15 @@ function CatalogList() {
     : " grid grid-cols-6 gap-x-[30px] gap-y-[40px] mebel-list active";
 
   return filteredCatalog ? (
-    <div className={clas}>
-      {filteredCatalog.map((elem) => (
-        <CatalogItem key={elem.id} {...elem} />
-      ))}
+    <div>
+      <div className={clas}>
+        {filteredCatalog.map((elem) => (
+          <CatalogItem key={elem.id} {...elem} />
+        ))}
+      </div>
+      <div className="mt-[80px] flex justify-center">
+        <Button text="смотреть все" />
+      </div>
     </div>
   ) : (
     <h1>Nothing here</h1>
