@@ -1,8 +1,8 @@
 import React from "react";
 import "./navbar.css";
-import logo from "./img/logotip.png";
-import open from "./img/menu.png";
-import phone from "./img/phone-call.png";
+import logo from "./images/logotip.png";
+import open from "./images/menu.png";
+import phone from "./images/phone-call.png";
 import { GrClose } from "react-icons/gr";
 
 function Navbar() {

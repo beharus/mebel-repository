@@ -1,16 +1,20 @@
 import React from "react";
 import "./footer.css";
-import logo from "../navbar/img/logo-w.png";
-import x from "../navbar/img/x.png";
-import instagram from "../navbar/img/instagram.png";
-import facebook from "../navbar/img/facebook.png";
-import ekmi from "../navbar/img/ekmi.png";
+import logo from "../navbar/images/logo-w.png";
+import x from "../navbar/images/x.png";
+import instagram from "../navbar/images/instagram.png";
+import facebook from "../navbar/images/facebook.png";
+import ekmi from "../navbar/images/ekmi.png";
 
 function Footer() {
   return (
     <div className="footer-content relative">
       <div>
-        <img className=" md:w-[364px] w-[182px] absolute right-[9.5%] -top-[49px] md:-top-[94px]" src={ekmi} />
+        <img
+          src={ekmi}
+          alt="ekmi.png"
+          className=" md:w-[364px] w-[182px] absolute right-[9.5%] -top-[49px] md:-top-[94px]"
+        />
       </div>
       <div className="footer container">
         <div className="logo">
