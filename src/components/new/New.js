@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { filterdCatalogList } from "../../redux/actions";
-import CatalogMenuItem from "../catalogMenuItem";
 
 function New() {
   const { catalog, filteredCatalog, catalogFilter, search } = useSelector(
@@ -26,13 +25,16 @@ function New() {
     cssEase: "linear",
   };
 
-  return filteredCatalog.length ? (
+  return filteredCatalog[0] ? (
     <div className="new container">
       <h1>Новинки</h1>
       <Slider {...settings}>
-        {filteredCatalog.map((item) => {
+        {filteredCatalog[0].map((item) => {
           return (
-            <div className="group cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6">
+            <div
+              key={item.id}
+              className="group cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6"
+            >
               <div className="cursor-pointer w-full relative">
                 <img
                   src={require(`../../images/${item.image}`)}

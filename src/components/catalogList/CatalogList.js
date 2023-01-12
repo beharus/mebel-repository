@@ -18,12 +18,12 @@ function CatalogList() {
 
   let clas = "catalog-list";
   clas += catalogActive
-    ? " grid grid-cols-12 gap-x-[30px] gap-y-[40px] catalog-list active"
-    : " grid grid-cols-6 gap-x-[30px] gap-y-[40px] catalog-list active";
+    ? " grid grid-cols-12 gap-x-[30px] gap-y-[40px] active"
+    : " grid grid-cols-6 gap-x-[30px] gap-y-[40px] active";
 
-  return filteredCatalog ? (
+  return filteredCatalog[0] ? (
     <div className={clas}>
-      {filteredCatalog.map((elem) => (
+      {filteredCatalog[0].map((elem) => (
         <CatalogItem key={elem.id} {...elem} />
       ))}
     </div>

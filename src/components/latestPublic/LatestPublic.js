@@ -13,13 +13,16 @@ function LatestPublic() {
     swipeToSlide: true,
   };
 
-  return filteredCatalog ? (
+  return filteredCatalog[0] ? (
     <div className="latest-public container">
       <h1>Последние публикации</h1>
       <Slider {...settings}>
-        {filteredCatalog.map((item) => {
+        {filteredCatalog[0].map((item) => {
           return (
-            <div className="group cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6">
+            <div
+              key={item.id}
+              className="group cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6"
+            >
               <div className="cursor-pointer w-full relative">
                 <img
                   src={require(`../../images/${item.image}`)}
