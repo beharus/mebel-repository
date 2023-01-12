@@ -1,24 +1,19 @@
 import React from "react";
 import "./footer.css";
-import logo from "../navbar/images/logo-w.png";
-import x from "../navbar/images/x.png";
-import instagram from "../navbar/images/instagram.png";
-import facebook from "../navbar/images/facebook.png";
-import ekmi from "../navbar/images/ekmi.png";
 
 function Footer() {
   return (
     <div className="footer-content relative">
       <div>
         <img
-          src={ekmi}
+          src={require(`../../images/ekmi.png`)}
           alt="ekmi.png"
           className=" md:w-[364px] w-[182px] absolute right-[9.5%] -top-[49px] md:-top-[94px]"
         />
       </div>
       <div className="footer container">
         <div className="logo">
-          <img src={logo} alt="" />
+          <img src={require(`../../images/logo-w.png`)} alt="logo" />
         </div>
         <div className="col1">
           <li>
@@ -60,10 +55,13 @@ function Footer() {
         <div className="col3">
           <div className="flex">
             <a href="!#">
-              <img src={instagram} alt="" />
+              <img
+                src={require(`../../images/instagram.png`)}
+                alt="instagram"
+              />
             </a>
             <a href="!#">
-              <img src={facebook} alt="" />
+              <img src={require(`../../images/facebook.png`)} alt="facebook" />
             </a>
           </div>
           <div className="numb">+38 (099)-638-45-37</div>
@@ -96,8 +94,8 @@ function Footer() {
                 className="close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-                src={x}
-                alt=""
+                src={require(`../../images/x.png`)}
+                alt="x png"
               />
             </div>
             <div className="modal-body">
