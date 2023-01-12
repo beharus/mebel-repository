@@ -7,7 +7,7 @@ function Contact() {
       <div className=" max-w-[1440px] mx-auto relative flex justify-center md:justify-end w-full">
         <img
           className=" left-[5%] md:block hidden xl:left-[15%] absolute top-0 bottom-0 h-full w-[670px]"
-          src={require("./imgages/post.png")}
+          src={require("../../images/post.png")}
           alt="post.png"
         />
         <div className=" z-10 max-w-[470px] w-full pt-[31px] pb-[17px] my-[31px] mx-[18px] md:mx-0 md:mr-[10%] bg-white px-[35px] md:px-[50px]">

@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import Contact from "../components/contact";
 import InfoDetail from "../components/infoDetail";
+import { useParams } from "react-router-dom";
 import { setInfoDetail } from "../redux/reducers/catalog_slice";
 
 function Model3D() {
@@ -15,6 +16,7 @@ function Model3D() {
   return (
     <div className="model-3d container">
       <InfoDetail />
+      <Contact />
     </div>
   );
 }

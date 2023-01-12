@@ -1,10 +1,20 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
+import { filterdCatalogList } from "../../redux/actions";
 import CatalogMenuItem from "../catalogMenuItem";
 
 function New() {
-  const { catalog } = useSelector((state) => state.catalog);
+  const { catalog, filteredCatalog, catalogFilter, search } = useSelector(
+    (state) => state.catalog
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(filterdCatalogList(catalog, catalogFilter, search));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalogFilter, search]);
+
   const settings = {
     // dots: true,
     infinite: true,
@@ -16,11 +26,11 @@ function New() {
     cssEase: "linear",
   };
 
-  return catalog ? (
-    <div className="new">
+  return filteredCatalog.length ? (
+    <div className="new container">
       <h1>Новинки</h1>
       <Slider {...settings}>
-        {catalog.map((item) => {
+        {filteredCatalog.map((item) => {
           return <CatalogMenuItem key={item.id} {...item} />;
         })}
       </Slider>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./navbar.css";
-<<<<<<< HEAD
 import logo from "./images/logotip.png";
 import open from "./images/menu.png";
 import phone from "./images/phone-call.png";
@@ -12,14 +11,6 @@ function Navbar() {
   const { catalog, catalogFilter } = useSelector((state) => state.catalog);
   const dispatch = useDispatch();
 
-=======
-import logo from "./img/logotip.png";
-import open from "./img/menu.png";
-import phone from "./img/phone-call.png";
-import { GrClose } from "react-icons/gr";
-
-function Navbar() {
->>>>>>> 93e7294 (redux and components added)
   return (
     <div className="navbar">
       <div className="navbar-content">
@@ -35,7 +26,6 @@ function Navbar() {
           </button>
           <div className="category-content">
             <ul>
-<<<<<<< HEAD
               {catalog.map((item) => {
                 return (
                   <li
@@ -51,29 +41,6 @@ function Navbar() {
                 );
               })}
               <li className="">2D-3D модели</li>
-=======
-              <li>
-                <a href="!#">Диваны </a>
-              </li>
-              <li>
-                <a href="!#">Кресла </a>
-              </li>
-              <li>
-                <a href="!#">Стулья </a>
-              </li>
-              <li>
-                <a href="!#">Матрацы </a>
-              </li>
-              <li>
-                <a href="!#">Пуфы </a>
-              </li>
-              <li>
-                <a href="!#">Эксклюзивная мебель</a>
-              </li>
-              <li>
-                <a href="!#">2D-3D модели</a>
-              </li>
->>>>>>> 93e7294 (redux and components added)
             </ul>
           </div>
         </div>

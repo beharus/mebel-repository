@@ -17,7 +17,7 @@ function CatalogMenu() {
   };
 
   return catalog ? (
-    <div className="catalog-menu">
+    <div className="catalog-menu container">
       <Slider {...settings}>
         {catalog.map((item) => {
           return <CatalogMenuItem key={item.id} {...item} />;

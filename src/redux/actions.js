@@ -2,8 +2,9 @@ import { setFilteredCatalog, setSearch } from "./reducers/catalog_slice";
 
 export const filterdCatalogList =
   (catalog, catalogFilter, search) => (dispatch) => {
-    const elements = catalog.filter((item) => item.name === catalogFilter)[0]
-      .value;
+    const elements = catalog.length
+      ? catalog.filter((item) => item.name === catalogFilter)[0].value
+      : [];
     dispatch(
       setFilteredCatalog(
         search

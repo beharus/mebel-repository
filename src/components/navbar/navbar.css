@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap");
 
 .navbar {
-<<<<<<< HEAD
-=======
-  position: fixed;
->>>>>>> 93e7294 (redux and components added)
   width: 100%;
   background: #fff;
   top: 0;
   left: 0;
-<<<<<<< HEAD
   z-index: 99999;
-=======
->>>>>>> 93e7294 (redux and components added)
 }
 .navbar .md {
   display: none;
@@ -29,10 +22,7 @@
   align-items: center;
   padding: 1.7% 9.5%;
   max-width: 1440px;
-<<<<<<< HEAD
   width: 100%;
-=======
->>>>>>> 93e7294 (redux and components added)
   margin-left: auto !important;
   margin-right: auto !important;
 }

@@ -19,7 +19,7 @@ function CatalogMenuItem({ name, image }) {
       <div className="card category-item">
         <div className="card-body">
           <img
-            src={require(`./images/${image}`)}
+            src={require(`../../images/${image}`)}
             className="card-img-top img-fluid"
             alt="img"
           />

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import "./catalogList.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -33,20 +32,6 @@ function CatalogList() {
       <div className="mt-[80px] flex justify-center">
         <Button text="смотреть все" />
       </div>
-=======
-import React from "react";
-import { useSelector } from "react-redux";
-import CatalogItem from "../catalogItem";
-
-function CatalogList() {
-  const { catalog } = useSelector((state) => state.catalog);
-
-  return catalog ? (
-    <div className="row row-cols-1 row-cols-md-6 g-4 catalog-list">
-      {catalog.map((item) => {
-        return <CatalogItem key={item.id} {...item} />;
-      })}
->>>>>>> 93e7294 (redux and components added)
     </div>
   ) : (
     <h1>Nothing here</h1>

@@ -11,23 +11,19 @@ function Model2D() {
   const { catalogLoading } = useSelector((state) => state.catalog);
 
   return (
-    <div>
-      <div className="main container">
-        {catalogLoading === "loading" ? (
-          <Loader />
-        ) : catalogLoading === "error" ? (
-          <Error />
-        ) : (
-          <>
-            <CatalogMenu />
-            <Search />
-            <CatalogList />
-          </>
-        )}
-      </div>
-      <div className=" my-[18%]">
-        <Contact />
-      </div>
+    <div className="main container">
+      {catalogLoading === "loading" ? (
+        <Loader />
+      ) : catalogLoading === "error" ? (
+        <Error />
+      ) : (
+        <div>
+          <CatalogMenu />
+          <Search />
+          <CatalogList />
+          <Contact />
+        </div>
+      )}
     </div>
   );
 }

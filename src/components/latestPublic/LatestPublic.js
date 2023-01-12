@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
-import CatalogMenuItem from "../catalogMenuItem/CatalogMenuItem";
+import CatalogItem from "../catalogItem/CatalogItem";
 
 function LatestPublic() {
   const { filteredCatalog } = useSelector((state) => state.catalog);
+
   const settings = {
     className: "center",
     infinite: true,
@@ -14,11 +15,11 @@ function LatestPublic() {
   };
 
   return filteredCatalog ? (
-    <div className="latest-public my-5 py-5">
+    <div className="latest-public container">
       <h1>Последние публикации</h1>
       <Slider {...settings}>
         {filteredCatalog.map((item) => {
-          return <CatalogMenuItem key={item.id} {...item} />;
+          return <CatalogItem key={item.id} {...item} />;
         })}
       </Slider>
     </div>

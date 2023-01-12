@@ -9,7 +9,7 @@ function InfoDetail() {
     <div className="row g-0">
       <div className="col-md-8">
         <img
-          src={require(`./images/${image}`)}
+          src={require(`../../images/${image}`)}
           className="img-fluid rounded-start"
           alt={image}
         />
