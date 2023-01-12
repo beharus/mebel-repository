@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -38,6 +39,22 @@ function CatalogItem({ name, image, description }) {
         <p className="card-text tracking-widest font-light text-xs leading-[127.5%] text-[#4b4844]">
           {description}
         </p>
+=======
+
+function CatalogItem({ name, image }) {
+  return (
+    <div className="col">
+      <div className="card category-item">
+        <img
+          src={require(`../../images/catalog_images/${image}`)}
+          className="card-img-top img-fluid"
+          alt="img"
+        />
+        <div className="card-body"></div>
+        <div className="card-footer">
+          <h5 className="card-title text-center">{name}</h5>
+        </div>
+>>>>>>> 93e7294 (redux and components added)
       </div>
     </div>
   );
