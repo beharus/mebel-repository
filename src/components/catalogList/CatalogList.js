@@ -15,7 +15,7 @@ function CatalogList() {
       dispatch(filterdCatalogList(catalog, catalogFilter, search));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search]);
+  }, [catalogFilter, search]);
 
   let clas = "catalog-list";
   clas += catalogActive

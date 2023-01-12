@@ -4,8 +4,13 @@ import logo from "./images/logotip.png";
 import open from "./images/menu.png";
 import phone from "./images/phone-call.png";
 import { GrClose } from "react-icons/gr";
+import { useDispatch, useSelector } from "react-redux";
+import { setCatalogFilter } from "../../redux/reducers/catalog_slice";
 
 function Navbar() {
+  const { catalog, catalogFilter } = useSelector((state) => state.catalog);
+  const dispatch = useDispatch();
+
   return (
     <div className="navbar">
       <div className="navbar-content">
@@ -21,27 +26,21 @@ function Navbar() {
           </button>
           <div className="category-content">
             <ul>
-              <li>
-                <a href="!#">Диваны </a>
-              </li>
-              <li>
-                <a href="!#">Кресла </a>
-              </li>
-              <li>
-                <a href="!#">Стулья </a>
-              </li>
-              <li>
-                <a href="!#">Матрацы </a>
-              </li>
-              <li>
-                <a href="!#">Пуфы </a>
-              </li>
-              <li>
-                <a href="!#">Эксклюзивная мебель</a>
-              </li>
-              <li>
-                <a href="!#">2D-3D модели</a>
-              </li>
+              {catalog.map((item) => {
+                return (
+                  <li
+                    key={item.id}
+                    value={item.name}
+                    className={
+                      item.name === catalogFilter ? "activeFilter" : ""
+                    }
+                    onClick={(e) => dispatch(setCatalogFilter(e.target.value))}
+                  >
+                    {item.name}
+                  </li>
+                );
+              })}
+              <li className="">2D-3D модели</li>
             </ul>
           </div>
         </div>

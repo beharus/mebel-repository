@@ -4,7 +4,6 @@ export const filterdCatalogList =
   (catalog, catalogFilter, search) => (dispatch) => {
     const elements = catalog.filter((item) => item.name === catalogFilter)[0]
       .value;
-
     dispatch(
       setFilteredCatalog(
         search

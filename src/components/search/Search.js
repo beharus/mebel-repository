@@ -5,6 +5,7 @@ import { handleKey } from "../../redux/actions";
 import {
   setSearch,
   setCatalogActive,
+  setCatalogFilter,
 } from "../../redux/reducers/catalog_slice";
 
 function Search() {
@@ -23,12 +24,16 @@ function Search() {
         <select
           className="form-select cursor-pointer border-none w-fit"
           aria-label="Default select example"
+          onChange={(e) => dispatch(setCatalogFilter(e.target.value))}
         >
           <option defaultValue="">Все 2D-3D модели</option>
           {catalog.map((item) => {
-            const clas = item.name === catalogFilter ? "activeFilter" : "";
             return (
-              <option key={item.id} value={item.id} className={clas}>
+              <option
+                key={item.id}
+                value={item.name}
+                className={item.name === catalogFilter ? "activeFilter" : ""}
+              >
                 {item.name}
               </option>
             );

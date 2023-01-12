@@ -1,15 +1,21 @@
 import React from "react";
 import "./catalogMenuItem.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setCatalogFilter } from "../../redux/reducers/catalog_slice";
 
-function CatalogSliderItem({ name, image }) {
+function CatalogMenuItem({ name, image }) {
   const { catalogFilter } = useSelector((state) => state.catalog);
+  const dispatch = useDispatch();
+
   const clas =
     name === catalogFilter
       ? "card-title text-center activeFilter"
       : "card-title text-center";
   return (
-    <div className="col d-flex">
+    <div
+      className="col d-flex"
+      onClick={() => dispatch(setCatalogFilter(name))}
+    >
       <div className="card category-item">
         <div className="card-body">
           <img
@@ -26,4 +32,4 @@ function CatalogSliderItem({ name, image }) {
   );
 }
 
-export default CatalogSliderItem;
+export default CatalogMenuItem;
