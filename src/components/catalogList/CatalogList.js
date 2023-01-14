@@ -23,7 +23,7 @@ function CatalogList() {
     : " grid grid-cols-6 gap-x-[30px] gap-y-[40px] mebel-list active";
 
   return filteredCatalog ? (
-    <div>
+    <div className="">
       <div className={clas}>
         {filteredCatalog.map((elem) => (
           <CatalogItem key={elem.id} {...elem} />

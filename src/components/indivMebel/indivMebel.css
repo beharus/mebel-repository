@@ -1,0 +1,9 @@
+@media(max-width: 1024px){.indivMebel .img-content{
+        order: 2;
+    }.indivMebel .text-content{
+        order: 1;
+    }.indivMebel .buttom-content{
+        order: 3;
+    }
+    
+}

@@ -1,0 +1,8 @@
+.slick-active{
+    background-color: transparent !important;
+    border: 0 !important;
+    color: 0 !important;
+}
+.slick-prev:before, .slick-next:before{
+    display: none !important;
+}

@@ -5,3 +5,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carouselFirstPage .slick-dots li.slick-active button:before {
+  color: #ff9619 !important;
+  opacity: 1 !important;
+}
+
+.carouselFirstPage .slick-dots li button:before {
+  color: #f2f3f5 !important;
+  opacity: 1 !important;
+}
+.carouselFirstPage .slick-prev:before,
+.carouselFirstPage .slick-next:before {
+  display: none !important;
+}
+.news-carousel .slick-prev:before,
+.news-carousel .slick-next:before,
+.latest-public .slick-prev:before,
+.latest-public .slick-next:before {
+  display: block !important;
+  color: #343434;
+  font-size: 32px;
+  opacity: .5;
+}
+.latest-public .slick-prev:before,
+.news-carousel .slick-prev:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  margin-right: 20px;
+}
+
+.news-carousel .slick-next:before,
+.latest-public .slick-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 20px;
+  content: "\f105";
+}
+.slick-next{
+  right: -32px;
+}
+.slick-prev{
+  left: -32px;
+}

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { filterdCatalogList } from "../../redux/actions";
+import Button from "../button/Button";
 import CatalogMenuItem from "../catalogMenuItem";
 
 function New() {
@@ -16,24 +17,49 @@ function New() {
   }, [catalogFilter, search]);
 
   const settings = {
-    // dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
+    speed: 2500,
+    autoplaySpeed: 25000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
   };
 
   return filteredCatalog.length ? (
-    <div className="new container">
-      <h1>Новинки</h1>
-      <Slider {...settings}>
-        {filteredCatalog.map((item) => {
-          return <CatalogMenuItem key={item.id} {...item} />;
-        })}
-      </Slider>
+    <div className=" container">
+      <div className=" container max-w-[1444px] mx-auto mt-[80px] lg:pt-[160px] lg:mt-[200px] px-[9.5%]">
+        <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
+          <span className=" text-[#ff9619]">Н</span>овинки
+        </h2>
+        <div className="news-carousel">
+          <Slider {...settings}>
+            {filteredCatalog.map((item) => {
+              return <CatalogMenuItem key={item.id} {...item} />;
+            })}
+          </Slider>
+          <div className=" flex justify-center mt-[40px] mb-[54px]">
+            <Button text="перейти в КАталог" />
+          </div>
+        </div>
+      </div>
     </div>
   ) : (
     <h1>Nothing here</h1>
