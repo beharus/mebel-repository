@@ -43,21 +43,43 @@ function New() {
     ],
   };
 
-  return filteredCatalog.length ? (
-    <div className=" container">
+  return filteredCatalog[0] ? (
+    <div className="new container">
       <div className=" container max-w-[1444px] mx-auto mt-[80px] lg:pt-[160px] lg:mt-[200px] px-[9.5%]">
-        <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
+        <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[90px]">
           <span className=" text-[#ff9619]">Н</span>овинки
         </h2>
+
         <div className="news-carousel">
           <Slider {...settings}>
-            {filteredCatalog.map((item) => {
-              return <CatalogMenuItem key={item.id} {...item} />;
+            {filteredCatalog[0].map((item) => {
+              return (
+                <div
+                  key={item.id}
+                  className="group px-[11%] cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6"
+                >
+                  <div className="cursor-pointer w-full relative">
+                    <img
+                      src={require(`../../images/${item.image}`)}
+                      className="object-cover w-full"
+                      alt="img"
+                    />
+                  </div>
+                  <div className="card-footer">
+                    <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
+                      {item.name}
+                    </h5>
+                    <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
+                      {item.price} UAH
+                    </h5>
+                  </div>
+                </div>
+              );
             })}
           </Slider>
-          <div className=" flex justify-center mt-[40px] mb-[54px]">
-            <Button text="перейти в КАталог" />
-          </div>
+        </div>
+        <div className=" flex justify-center mt-[40px] md:mt-[60px] mb-[54px]">
+          <Button text="перейти в КАталог" />
         </div>
       </div>
     </div>

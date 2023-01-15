@@ -1,0 +1,50 @@
+import React from "react";
+import { useSelector } from "react-redux";
+import Slider from "react-slick";
+
+function LatestPublic() {
+  const { filteredCatalog } = useSelector((state) => state.catalog);
+
+  const settings = {
+    className: "center",
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    swipeToSlide: true,
+  };
+
+  return filteredCatalog[0] ? (
+    <div className="latest-public container px-[9.5%]">
+      <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
+        <span className=" text-[#ff9619]">П</span>оследние публикации
+      </h2>
+      <Slider {...settings}>
+        {filteredCatalog[0].map((item) => {
+          return (
+            <div
+              key={item.id}
+              className="group px-1 cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6"
+            >
+              <div className="cursor-pointer w-full relative">
+                <img
+                  src={require(`../../images/${item.image}`)}
+                  className="object-cover w-full"
+                  alt="img"
+                />
+              </div>
+              <div className="card-footer">
+                <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
+                  {item.name}
+                </h5>
+              </div>
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
+  ) : (
+    <h1>Nothing here</h1>
+  );
+}
+
+export default LatestPublic;

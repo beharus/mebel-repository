@@ -26,7 +26,7 @@ function CatalogItem({ name, image, description }) {
     <div className="bg-[#F2F3F5] px-[2%] py-[15px] grid grid-cols-2 justify-between items-center category-item lg:col-span-3 sm:col-span-6 col-span-6">
       <div className=" col-span-1 gap-5 w-full flex justify-center items-center cursor-pointer relative">
         <img
-          src={require(`./images/${image}`)}
+          src={require(`../../images/${image}`)}
           className="object-cover w-10/12"
           alt="img"
         />

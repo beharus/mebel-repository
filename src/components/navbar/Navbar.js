@@ -1,8 +1,5 @@
 import React from "react";
 import "./navbar.css";
-import logo from "./images/logotip.png";
-import open from "./images/menu.png";
-import phone from "./images/phone-call.png";
 import { GrClose } from "react-icons/gr";
 import { useDispatch, useSelector } from "react-redux";
 import { setCatalogFilter } from "../../redux/reducers/catalog_slice";
@@ -51,7 +48,7 @@ function Navbar() {
           <a href="!#">Контакты</a>
         </div>
         <div className="logo">
-          <img src={logo} alt="" />
+          <img src={require(`../../images/logotip.png`)} alt="logo" />
         </div>
         <div className="menu-item">
           <a href="!#">О компании</a>
@@ -81,7 +78,7 @@ function Navbar() {
                   .classList.toggle("active");
               }}
             >
-              <img src={phone} alt="" />
+              <img src={require(`../../images/phone-call.png`)} alt="phone" />
               <div
                 onClick={() => document.querySelector(".menu-numb-md").select()}
                 className="menu-numb-md"
@@ -100,7 +97,7 @@ function Navbar() {
                   .classList.add("active");
               }}
             >
-              <img src={open} alt="" />
+              <img src={require(`../../images/menu.png`)} alt="menu" />
             </i>
 
             <div className="md-menu">

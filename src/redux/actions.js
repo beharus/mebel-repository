@@ -2,18 +2,22 @@ import { setFilteredCatalog, setSearch } from "./reducers/catalog_slice";
 
 export const filterdCatalogList =
   (catalog, catalogFilter, search) => (dispatch) => {
-    const elements = catalog.length
+    const items = catalog.length
       ? catalog.filter((item) => item.name === catalogFilter)[0].value
       : [];
-    dispatch(
-      setFilteredCatalog(
-        search
-          ? elements.filter((item) =>
-              item.name.toLowerCase().startsWith(search.toLowerCase())
-            )
-          : elements
-      )
-    );
+
+    const elements = search
+      ? items.filter((elem) =>
+          elem.name.toLowerCase().startsWith(search.toLowerCase())
+        )
+      : items;
+
+    const result = [];
+    for (let i = 0; i < elements.length; i += 16) {
+      result.push(elements.slice(i, i + 16));
+    }
+
+    dispatch(setFilteredCatalog(result));
   };
 
 export const handleKey = (e, search) => (dispatch) => {

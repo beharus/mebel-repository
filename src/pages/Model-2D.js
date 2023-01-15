@@ -6,6 +6,7 @@ import Loader from "../components/loader";
 import CatalogList from "../components/catalogList";
 import CatalogMenu from "../components/catalogMenu";
 import Contact from "../components/contact";
+import Button from "../components/button/Button";
 
 function Model2D() {
   const { catalogLoading } = useSelector((state) => state.catalog);
@@ -21,6 +22,9 @@ function Model2D() {
           <CatalogMenu />
           <Search />
           <CatalogList />
+          <div className="mt-[80px] flex justify-center">
+            <Button text="смотреть все" />
+          </div>
           <Contact />
         </div>
       )}
