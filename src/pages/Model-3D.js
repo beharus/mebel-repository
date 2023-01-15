@@ -10,7 +10,7 @@ function Model3D() {
   const dispatch = useDispatch();
   const { name } = useParams();
 
-  const item = filteredCatalog.filter((item) => item.name === name)[0];
+  const item = filteredCatalog[0].find((item) => item.name === name);
   dispatch(setInfoDetail(item));
 
   return (
