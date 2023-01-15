@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../button/Button";
 import "./footer.css";
 
 function Footer() {
@@ -64,6 +65,15 @@ function Footer() {
               <img src={require(`../../images/facebook.png`)} alt="facebook" />
             </a>
           </div>
+
+          <div className="numb">+38 (099)-638-45-37</div>
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            type="button"
+          >
+            <span>Персональная консультация</span>
+          </button>
         </div>
       </div>
       <p>© 1993–2021 Интернет-магазин «EKMI™» — меблі</p>
