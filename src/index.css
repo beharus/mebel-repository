@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap");
 .activeFilter {
   color: #ff9619;
 }
@@ -9,11 +9,13 @@
 .carouselFirstPage .slick-dots li.slick-active button:before {
   color: #ff9619 !important;
   opacity: 1 !important;
+  font-size: 12px;
 }
 
 .carouselFirstPage .slick-dots li button:before {
   color: #f2f3f5 !important;
   opacity: 1 !important;
+  font-size: 12px;
 }
 .carouselFirstPage .slick-prev:before,
 .carouselFirstPage .slick-next:before {
@@ -26,10 +28,10 @@
   display: block !important;
   color: #343434;
   font-size: 32px;
-  opacity: .5;
+  opacity: 0.5;
 }
 .latest-public .slick-prev:before,
-.news-carousel .slick-prev:before{
+.news-carousel .slick-prev:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f104";
@@ -43,9 +45,25 @@
   margin-left: 20px;
   content: "\f105";
 }
-.slick-next{
+.slick-next {
   right: -32px;
 }
-.slick-prev{
+.slick-prev {
   left: -32px;
+}
+
+.sponsor-carousel .slick-next:before,
+.sponsor-carousel .slick-prev:before{
+  display: none;
+}
+.sponsor-carousel .slick-dots li.slick-active button:before {
+  color: #ff9619 !important;
+  opacity: 1 !important;
+  font-size: 12px;
+}
+
+.sponsor-carousel .slick-dots li button:before {
+  color: #f2f3f5 !important;
+  opacity: 1 !important;
+  font-size: 12px;
 }

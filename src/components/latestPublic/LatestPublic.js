@@ -6,11 +6,13 @@ function LatestPublic() {
   const { filteredCatalog } = useSelector((state) => state.catalog);
 
   const settings = {
-    className: "center",
     infinite: true,
-    centerPadding: "60px",
     slidesToShow: 4,
     swipeToSlide: true,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 25000,
+    pauseOnHover: true,
   };
 
   return filteredCatalog[0] ? (

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { filterdCatalogList } from "../../redux/actions";
 import Button from "../button/Button";
-import CatalogMenuItem from "../catalogMenuItem";
+import './new.css'
 
 function New() {
   const { catalog, filteredCatalog, catalogFilter, search } = useSelector(
@@ -19,9 +19,9 @@ function New() {
   const settings = {
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: true,
-    speed: 2500,
+    speed: 1500,
     autoplaySpeed: 25000,
     pauseOnHover: true,
     responsive: [
@@ -29,7 +29,7 @@ function New() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
