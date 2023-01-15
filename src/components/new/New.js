@@ -69,7 +69,7 @@ function New() {
                     <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
                       {item.name}
                     </h5>
-                    <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
+                    <h5 className=" font-openSans font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#ff9619] mt-[5px] card-title text-center">
                       {item.price} UAH
                     </h5>
                   </div>
