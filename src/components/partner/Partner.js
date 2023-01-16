@@ -78,8 +78,8 @@ function Partner() {
           </div>
         </div>
       </div>
-      <div className=" mx-auto mt-[140px] mb-[160px]">
-        <div className=" px-[2%] container ">
+      <div className=" mx-auto container mt-[140px] mb-[160px]">
+        <div className=" flex justify-center px-[2%] container ">
           <img src={require('../../images/sponsor.png')} alt="" />
         </div>
       </div>

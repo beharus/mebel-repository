@@ -24,11 +24,14 @@
 .news-carousel .slick-prev:before,
 .news-carousel .slick-next:before,
 .latest-public .slick-prev:before,
-.latest-public .slick-next:before {
+.latest-public .slick-next:before,
+.catalog-menu .slick-next:before, 
+  .catalog-menu .slick-prev:before {
   display: block !important;
   color: #343434;
   font-size: 32px;
   opacity: 0.5;
+  z-index: 999999;
 }
 .latest-public .slick-prev:before,
 .news-carousel .slick-prev:before {
@@ -51,7 +54,6 @@
 .slick-prev {
   left: -32px;
 }
-
 .sponsor-carousel .slick-next:before,
 .sponsor-carousel .slick-prev:before{
   display: none;

@@ -4,8 +4,8 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <div className="footer-content relative mt-[54px]">
-      <div>
+    <div className="footer-content relative">
+      <div className=" mt-[100px]">
         <img
           src={require(`../../images/ekmi.png`)}
           alt="ekmi.png"
