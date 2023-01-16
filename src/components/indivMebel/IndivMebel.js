@@ -7,7 +7,7 @@ function IndivMebel() {
   return (
     <div className=" iniv-mebel relative lg:bg-transparent bg-no-repeat mt-[125px] mb-[90px] lg:mb-[160px] lg:mt-[195px]">
       <div className=" container">
-        <div className=" container indivMebel max-w-[1444px] mx-auto px-[9.5%] grid lg:flex justify-center flex-col lg:flex-row items-center gap-7">
+        <div className=" container indivMebel mx-auto px-[9.5%] grid lg:flex justify-center flex-col lg:flex-row items-center gap-7">
           <div className=" absolute h-[70%] top-0 lg:h-full w-full lg:w-[75%] right-0 bg-[#5B5B5B] -z-30"></div>
           <div className=" absolute h-[50%] lg:h-[80%] bottom-[12%] right-0 lg:top-0 w-[60%] lg:w-[40%] lg:left-0 -z-30 bg-[#A9C2BE]"></div>
           <div className=" absolute right-0 lg:right-[5%] -top-[35px] bg-[#ff9619]">

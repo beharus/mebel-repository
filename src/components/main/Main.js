@@ -6,7 +6,7 @@ function Main() {
   return (
     <div className=" bg-[#CCB2A3]">
       <div className=" container ">
-        <div className="lg:mx-5 px-[9.5%] max-w-[1444px] mx-auto block lg:flex justify-center items-center lg:pb-16 py-9">
+        <div className="lg:mx-5 px-[2%] mx-auto block lg:flex justify-center items-center lg:pb-16 py-9">
           <div className=" mx-2">
             <h1 className=" font-raleway capitalize font-semibold leading-[110%] text-[25px] mb-[30px] lg:text-[40px] text-white">
               <span className=" text-[#ff9619]">Л</span>учная Жизнь, <br />

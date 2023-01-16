@@ -12,7 +12,7 @@ function Model2D() {
   const { catalogLoading } = useSelector((state) => state.catalog);
 
   return (
-    <div className="main container">
+    <div className="main">
       {catalogLoading === "loading" ? (
         <Loader />
       ) : catalogLoading === "error" ? (
@@ -22,9 +22,6 @@ function Model2D() {
           <CatalogMenu />
           <Search />
           <CatalogList />
-          <div className="mt-[80px] flex justify-center">
-            <Button text="смотреть все" />
-          </div>
           <Contact />
         </div>
       )}

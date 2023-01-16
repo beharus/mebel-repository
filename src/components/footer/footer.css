@@ -4,14 +4,13 @@
 }
 .footer {
   width: 100% !important;
-  padding: 5.5% 9.5% 30px;
+  padding: 5.5% 2% 30px;
   background: #5b5b5b;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: space-between;
-  max-width: 1444px;
   margin: auto !important;
 }
 

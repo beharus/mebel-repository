@@ -39,8 +39,8 @@ function LatestPublic() {
   };
 
   return filteredCatalog[0] ? (
-    <div className=" container max-w-[1444px]">
-      <div className="latest-public container px-[9.5%] mb-[160px]">
+    <div className=" container">
+      <div className="latest-public container px-[8%] md:px-[2%] mb-[160px]">
         <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
           <span className=" text-[#ff9619]">П</span>оследние публикации
         </h2>

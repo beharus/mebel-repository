@@ -23,7 +23,7 @@ function CatalogItem({ name, image, description }) {
       </Link>
     </div>
   ) : (
-    <div className="bg-[#F2F3F5] px-[2%] py-[15px] grid grid-cols-2 justify-between items-center category-item lg:col-span-3 sm:col-span-6 col-span-6">
+    <div className="bg-[#F2F3F5] px-[2%] py-[15px] grid grid-cols-1 sm:grid-cols-2 justify-between items-center category-item lg:col-span-3 sm:col-span-6 col-span-6">
       <div className=" col-span-1 gap-5 w-full flex justify-center items-center cursor-pointer relative">
         <img
           src={require(`../../images/${image}`)}
@@ -32,10 +32,10 @@ function CatalogItem({ name, image, description }) {
         />
       </div>
       <div className=" col-span-1 gap-5 card-footer font-raleway">
-        <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase text-[#4B4844] mb-[15px] card-title">
+        <h5 className="px-[8%] sm:px-0 font-raleway font-medium text-lg leading-[22px] uppercase text-[#4B4844] mb-[15px] card-title">
           {name}
         </h5>
-        <p className="card-text tracking-widest font-light text-xs leading-[127.5%] text-[#4b4844]">
+        <p className="px-[8%] sm:px-0 pb-10 card-text tracking-widest font-light text-xs leading-[127.5%] text-[#4b4844]">
           {description}
         </p>
       </div>

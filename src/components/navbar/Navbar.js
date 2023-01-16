@@ -9,7 +9,7 @@ function Navbar() {
   const dispatch = useDispatch();
 
   return (
-    <div className="navbar container">
+    <div className="navbar container px-[2%]">
       <div className="navbar-content">
         <div className="menu-item category">
           <button

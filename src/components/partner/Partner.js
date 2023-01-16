@@ -40,14 +40,14 @@ function Partner() {
     <div>
       <div className=" mt-[160px] mb-[115px]">
         <div className="">
-          <div className=" max-w-[1440px] mx-auto">
-            <h2 className=" max-w-[1440px] mx-auto container px-[9.5%] text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
+          <div className="mx-auto">
+            <h2 className="mx-auto container px-[2%] text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
               <span className=" text-[#ff9619]">Н</span>аши партнеры
             </h2>
           </div>
           <div className="relative">
-            <div className=" container max-w-[1442px]">
-              <div className="max-w-[1442px] px-[2%] md:px-[9.5%] grid lg:grid-cols-4 gap-[30px] items-center justify-between grid-cols-1 py-[28px]">
+            <div className=" container">
+              <div className=" px-[2%] md:px-[2%] grid lg:grid-cols-4 gap-[30px] items-center justify-between grid-cols-1 py-[28px]">
                 <div className=" absolute left-0 w-full lg:w-[70%] bg-[#5B5B5B] top-0 h-full -z-10"></div>
                 <div className="absolute lg:w-[100px] w-[46px] h-[46px] lg:h-[80px] bg-[#ff9619] lg:-top-[34px] -z-[1] -top-[23px] right-[2%] lg:right-[44%]"></div>
                 <div className=" absolute bg-[#A9C2BE] lg:bg-[#CCB2A3] lg:right-0 lg:left-auto left-0 bottom-[-100px] lg:bottom-auto lg:top-0 -z-10 w-[80%] sm:w-[60%] lg:w-[40%] h-[35%] sm:h-[50%] lg:h-[75%]"></div>
@@ -78,18 +78,18 @@ function Partner() {
           </div>
         </div>
       </div>
-      <div className=" max-w-[1440px] mx-auto mt-[140px] mb-[160px]">
-        <div className=" px-[9.5%] container max-w-[1440px] ">
+      <div className=" mx-auto mt-[140px] mb-[160px]">
+        <div className=" px-[2%] container ">
           <img src={require('../../images/sponsor.png')} alt="" />
         </div>
       </div>
-      <div className="sponsor-carousel max-w-[1440px] mx-auto">
-        <div className=" px-[2%] sm:px-[9.5%] container max-w-[1440px] mb-[90px] md:mb-[160px]">
+      <div className="sponsor-carousel container mx-auto">
+        <div className=" px-[2%] sm:px-[2%] container mb-[90px] md:mb-[160px]">
           <Slider {...setting}>
-            <div className=" sm:max-w-[270px] h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel1.png')} alt="" /></div>
-            <div className=" sm:max-w-[270px] h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel2.png')} alt="" /></div>
-            <div className=" sm:max-w-[270px] h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel3.png')} alt="" /></div>
-            <div className=" sm:max-w-[270px] h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel4.png')} alt="" /></div>
+            <div className=" h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel1.png')} alt="" /></div>
+            <div className=" h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel2.png')} alt="" /></div>
+            <div className=" h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel3.png')} alt="" /></div>
+            <div className=" h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel4.png')} alt="" /></div>
           </Slider>
         </div>
       </div>

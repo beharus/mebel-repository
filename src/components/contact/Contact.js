@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="bg-[#A9C2BE] m-0 p-0 ">
       <div className=" container">
-        <div className=" max-w-[1440px] mx-auto relative flex justify-center md:justify-end w-full">
+        <div className=" mx-auto relative flex justify-center md:justify-end w-full">
           <img
             className=" left-[5%] md:block hidden xl:left-[15%] absolute top-0 bottom-0 h-full w-auto"
             src={require("../../images/post.png")}

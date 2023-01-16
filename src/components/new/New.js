@@ -45,7 +45,7 @@ function New() {
 
   return filteredCatalog[0] ? (
     <div className="new container">
-      <div className=" container max-w-[1444px] mx-auto mt-[80px] lg:pt-[160px] lg:mt-[200px] px-[9.5%]">
+      <div className=" container mx-auto mt-[80px] lg:pt-[160px] lg:mt-[200px] px-[2%]">
         <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[90px]">
           <span className=" text-[#ff9619]">Н</span>овинки
         </h2>
