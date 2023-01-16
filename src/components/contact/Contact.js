@@ -11,7 +11,8 @@ function Contact() {
             src={require("../../images/post.png")}
             alt="post.png"
           />
-          <div className=" z-10 max-w-[470px] w-full pt-[31px] pb-[17px] my-[31px] mx-[18px] md:mx-0 md:mr-[10%] bg-white px-[35px] md:px-[50px]">
+          <div className=" relative z-10 max-w-[470px] w-full pt-[31px] pb-[17px] my-[31px] mx-[18px] md:mx-0 md:mr-[10%] bg-white px-[35px] md:px-[50px]">
+            <img className=" hidden sm:block absolute top-[-21px] left-[-15%]" src={require('../../images/О.png')}/>
             <p className=" text-[#FF9619] leading-4 font-medium text-[10px] md:text-sm mb-[10px] md:mb-[15px]">
               Заполните форму
             </p>

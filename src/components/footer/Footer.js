@@ -90,7 +90,8 @@ function Footer() {
       >
         <div className="modal-dialog">
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header relative">
+            <img className=" hidden sm:block absolute top-[-21px] left-[-15%]" src={require('../../images/О.png')}/>
               <h1 className="modal-title" id="exampleModalLabel">
                 <span>Заполните форму</span>
                 <br />
