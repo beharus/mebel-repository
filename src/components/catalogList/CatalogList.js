@@ -29,12 +29,9 @@ function CatalogList() {
           <CatalogItem key={elem.id} {...elem} />
         ))}
       </div>
-<<<<<<< Updated upstream
       <div className="my-[80px] flex justify-center">
         <Button text="смотреть все" />
       </div>
-=======
->>>>>>> Stashed changes
     </div>
   ) : (
     <h1>Nothing here</h1>

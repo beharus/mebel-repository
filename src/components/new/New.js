@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { filterdCatalogList } from "../../redux/actions";
 import Button from "../button/Button";
-<<<<<<< Updated upstream
 import './new.css'
-=======
->>>>>>> Stashed changes
 
 function New() {
   const { catalog, filteredCatalog, catalogFilter, search } = useSelector(
