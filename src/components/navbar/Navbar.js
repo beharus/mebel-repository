@@ -29,7 +29,9 @@ function Navbar() {
                     key={item.id}
                     value={item.name}
                     className={
-                      item.name === catalogFilter ? "bg-[#ff9619] text-white" : " hover:bg-[#ff9619] hover:text-white px-[11px] cursor-pointer text-[#343434] text-[17px] leading-[32px] font-raleway"
+                      item.name === catalogFilter
+                        ? "bg-[#ff9619] text-white"
+                        : " hover:bg-[#ff9619] hover:text-white px-[11px] cursor-pointer text-[#343434] text-[17px] leading-[32px] font-raleway"
                     }
                     onClick={(e) => dispatch(setCatalogFilter(e.target.value))}
                   >
@@ -37,6 +39,9 @@ function Navbar() {
                   </li>
                 );
               })}
+              <li className="hover:bg-[#ff9619] hover:text-white px-[11px] cursor-pointer text-[#343434] text-[17px] leading-[32px] font-raleway">
+                2D-3D модели
+              </li>
             </ul>
           </div>
         </div>

@@ -9,6 +9,7 @@ const initialState = {
   filteredCatalog: [],
   search: "",
   infoDetail: {},
+  dIndex: 0,
 };
 
 export const fetchCatalog = createAsyncThunk(
@@ -41,6 +42,9 @@ export const catalogSlice = createSlice({
     setInfoDetail(state, action) {
       state.infoDetail = action.payload;
     },
+    setDIndex(state, action) {
+      state.dIndex = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -66,4 +70,5 @@ export const {
   setFilteredCatalog,
   setSearch,
   setInfoDetail,
+  setDIndex,
 } = catalogSlice.actions;

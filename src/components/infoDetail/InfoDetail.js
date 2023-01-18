@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 function InfoDetail() {
   const { infoDetail } = useSelector((state) => state.catalog);
-  const { name, image, description } = infoDetail;
+  const { name, image, price, description } = infoDetail;
 
   return (
     <div className="row container my-[35px] mx-auto">
@@ -27,7 +27,7 @@ function InfoDetail() {
             {description}
           </p>
           <p className=" text-[#ff9619] leading-[27px] text-xl font-semibold uppercase mt-[15px] mb-[30px]">
-            от {/*65 000*/} uah
+            от {price} uah
           </p>
           <div className=" mb-[200px]">
             <Button text="просчет стоимости" />

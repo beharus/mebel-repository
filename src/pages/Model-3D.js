@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Contact from "../components/contact";
 import InfoDetail from "../components/infoDetail";
+import LatestPublic from "../components/latestPublic";
 import { useParams } from "react-router-dom";
 import { setInfoDetail } from "../redux/reducers/catalog_slice";
 
@@ -17,6 +18,7 @@ function Model3D() {
     <div className="model-3d">
       <InfoDetail />
       <Contact />
+      <LatestPublic />
     </div>
   );
 }

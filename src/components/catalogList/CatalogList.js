@@ -5,15 +5,22 @@ import CatalogItem from "../catalogItem";
 import { filterdCatalogList } from "../../redux/actions";
 import Button from "../button/Button";
 import Slider from "react-slick";
+import { setDIndex } from "../../redux/reducers/catalog_slice";
 
 function CatalogList() {
-  const { catalog, catalogFilter, catalogActive, filteredCatalog, search } =
-    useSelector((state) => state.catalog);
+  const {
+    catalog,
+    catalogFilter,
+    catalogActive,
+    filteredCatalog,
+    search,
+    dIndex,
+  } = useSelector((state) => state.catalog);
   const dispatch = useDispatch();
 
   const settings = {
     speed: 500,
-    infinite:false,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
@@ -25,38 +32,30 @@ function CatalogList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [catalogFilter, search]);
 
-  let clas = "catalog-list";
-  clas += catalogActive
-    ? " mx-auto container grid grid-cols-12 gap-x-[30px] gap-y-[40px] active"
-    : " mx-auto container grid grid-cols-6 gap-x-[30px] gap-y-[40px] active";
+  let clas = "catalog-list mx-auto container grid gap-x-[30px] gap-y-[40px]";
+  clas += catalogActive ? " grid-cols-12" : " grid-cols-6";
 
   return filteredCatalog[0] ? (
     <div className="mx-auto container">
       <div className={clas}>
-        {filteredCatalog[0].map((elem) => (
+        {filteredCatalog[dIndex].map((elem) => (
           <CatalogItem key={elem.id} {...elem} />
         ))}
       </div>
       <div className=" pager-item w-1/12 mt-[60px] text-center mx-auto">
         <Slider {...settings}>
-          <div className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]">
-            <span>1</span>
-          </div>
-          <div className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]">
-            <span>2</span>
-          </div>
-          <div className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]">
-            <span>3</span>
-          </div>
-          <div className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]">
-            <span>4</span>
-          </div>
-          <div className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]">
-            <span>5</span>
-          </div>
-          <div className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]">
-            <span>6</span>
-          </div>
+          {filteredCatalog.map((_, index) => {
+            return (
+              <div
+                key={index}
+                className=" font-light text-xl leading-[22px] cursor-pointer hover:text-[#343434] hover:font-medium duration-200 text-[#34343480]"
+              >
+                <span onClick={() => dispatch(setDIndex(index))}>
+                  {index + 1}
+                </span>
+              </div>
+            );
+          })}
         </Slider>
       </div>
       <div className="my-[80px] flex justify-center">
