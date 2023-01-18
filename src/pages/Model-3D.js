@@ -14,7 +14,7 @@ function Model3D() {
   dispatch(setInfoDetail(item));
 
   return (
-    <div className="model-3d container">
+    <div className="model-3d">
       <InfoDetail />
       <Contact />
     </div>

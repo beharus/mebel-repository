@@ -6,7 +6,7 @@ function InfoDetail() {
   const { name, image, description } = infoDetail;
 
   return (
-    <div className="row g-0">
+    <div className="row container mx-auto">
       <div className="col-md-8">
         <img
           src={require(`../../images/${image}`)}
