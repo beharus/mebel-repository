@@ -84,7 +84,7 @@ function Partner() {
         </div>
       </div>
       <div className="sponsor-carousel container mx-auto">
-        <div className=" px-[2%] sm:px-[2%] container mb-[90px] md:mb-[160px]">
+        <div className=" px-[2%] sm:px-[2%] container mb-[90px] md:mb-[260px]">
           <Slider {...setting}>
             <div className=" h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel1.png')} alt="" /></div>
             <div className=" h-full px-1 md:px-2 w-full"><img className=" w-full" src={require('../../images/sponsor-carousel2.png')} alt="" /></div>
