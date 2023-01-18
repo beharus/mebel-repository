@@ -7,15 +7,15 @@ function InfoDetail() {
   const { name, image, description } = infoDetail;
 
   return (
-    <div className="row container mx-auto">
-      <div className="col-md-8">
+    <div className="row container my-[35px] mx-auto">
+      <div className="col-lg-8">
         <img
           src={require(`../../images/${image}`)}
-          className="img-fluid rounded-start"
+          className="img-fluid object-cover max-h-[380px] w-full max-w-[700px] h-full rounded-start"
           alt={image}
         />
       </div>
-      <div className="col-md-4">
+      <div className="col-lg-4">
         <div className="card-body">
           <h5 className="card-title text-[35px] font-bold leading-[52px] font-raleway mb-[30px]">
             {name}
