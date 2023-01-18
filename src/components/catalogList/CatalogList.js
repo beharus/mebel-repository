@@ -3,7 +3,7 @@ import "./catalogList.css";
 import { useDispatch, useSelector } from "react-redux";
 import CatalogItem from "../catalogItem";
 import { filterdCatalogList } from "../../redux/actions";
-import Button from '../button/Button'
+import Button from "../button/Button";
 
 function CatalogList() {
   const { catalog, catalogFilter, catalogActive, filteredCatalog, search } =

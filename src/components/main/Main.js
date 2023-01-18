@@ -13,7 +13,7 @@ function Main() {
               Созданная Для Вас!
             </h1>
             <div className=" mt-[73px] hidden lg:block">
-              <Button text="перейти в КАталог" />
+              <Button text="перейти в Каталог" href="/model-2D" />
             </div>
           </div>
           <div className=" w-full lg:w-10/12 justify-self-end lg:-mb-[200px]">

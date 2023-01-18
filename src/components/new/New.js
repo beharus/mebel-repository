@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import "./new.css";
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { filterdCatalogList } from "../../redux/actions";
 import Button from "../button/Button";
-import './new.css'
 
 function New() {
   const { catalog, filteredCatalog, catalogFilter, search } = useSelector(
@@ -79,7 +79,7 @@ function New() {
           </Slider>
         </div>
         <div className=" flex justify-center mt-[40px] md:mt-[60px] mb-[54px]">
-          <Button text="перейти в КАталог" />
+          <Button text="перейти в Каталог" href="/model-2D" />
         </div>
       </div>
     </div>
