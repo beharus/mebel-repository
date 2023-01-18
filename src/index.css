@@ -33,7 +33,13 @@
   opacity: 0.5;
   z-index: 999999;
 }
+.pager-item .slick-prev:before,
+.pager-item .slick-next:before{
+  font-size: 22px;
+  color: #34343480;
+}
 .latest-public .slick-prev:before,
+.pager-item .slick-prev:before,
 .news-carousel .slick-prev:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -42,6 +48,7 @@
 }
 
 .news-carousel .slick-next:before,
+.pager-item .slick-next:before,
 .latest-public .slick-next:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
