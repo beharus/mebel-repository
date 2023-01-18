@@ -16,7 +16,7 @@ function Main() {
               <Button text="перейти в Каталог" href="/model-2D" />
             </div>
           </div>
-          <div className=" w-full lg:w-10/12 justify-self-end lg:-mb-[200px]">
+          <div className=" w-full lg:w-10/12 flex justify-end lg:-mb-[200px]">
             <CarouselFirstPage />
           </div>
         </div>
