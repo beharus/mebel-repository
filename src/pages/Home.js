@@ -26,7 +26,7 @@ function Home() {
           <New />
           <IndivMebel />
           <AboutHistory />
-          <LatestPublic />
+          <LatestPublic firstLetter='П' header='оследние публикации' />
           <Contact />
           <AboutEkmiMebel />
           <Partner />

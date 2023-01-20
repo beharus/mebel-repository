@@ -5,7 +5,7 @@ function AboutEkmiMebel(props) {
     <div>
       <div className="container mx-auto mt-[160px]">
         <div className="container mx-auto px-[2%] md:grid-cols-2 lg:grid-cols-3 justify-center gap-2 grid">
-          <div className=" relative col-span-1">
+          <div className=" my-[25px] relative col-span-1">
             <div className=" absolute top-0 left-0 w-[105px] font-poppins leading-[196px] text-[#5A5A5A1A] font-bold text-[176px] self-start">1</div>
             <div className=" mt-[50px] ml-[55px] md:ml-[15%] font-raleway text-lg font-medium tracking-wider leading-[127.5%] text-[#343434]">
               Осуществляемые компанией «Экми-Мебель» постоянные инвестиции в
@@ -13,7 +13,7 @@ function AboutEkmiMebel(props) {
               компании на украинском рынке мягкой мебели.
             </div>
           </div>
-          <div className=" relative col-span-1">
+          <div className=" my-[25px] relative col-span-1">
             <div className=" absolute top-0 left-0 w-[105px] font-poppins leading-[196px] text-[#5A5A5A1A] font-bold text-[176px] self-start">2</div>
             <div className=" mt-[50px] ml-[55px] md:ml-[15%] font-raleway text-lg font-medium tracking-wider leading-[127.5%] text-[#343434]">
               Фабрика «Экми-мебель» сертифицирована по системе менеджмента
@@ -21,7 +21,7 @@ function AboutEkmiMebel(props) {
               представительством «Бюро Веритас» в Украине.
             </div>
           </div>
-          <div className=" relative col-span-1 justify-self-center">
+          <div className=" my-[25px] relative col-span-1 justify-self-center">
             <div className=" absolute top-0 left-0 w-[105px] font-poppins leading-[196px] text-[#5A5A5A1A] font-bold text-[176px] self-start">3</div>
             <div className=" mt-[50px] ml-[55px] md:ml-[15%] font-raleway text-lg font-medium tracking-wider leading-[127.5%] text-[#343434]">
               Компания «Экми-Мебель» первой из украинских производителей мягкой

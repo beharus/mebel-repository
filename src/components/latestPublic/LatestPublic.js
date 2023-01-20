@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
 
-function LatestPublic() {
+function LatestPublic(props) {
   const { filteredCatalog } = useSelector((state) => state.catalog);
 
   const settings = {
@@ -42,7 +42,7 @@ function LatestPublic() {
     <div className=" container">
       <div className="latest-public container px-[8%] md:px-[2%] mb-[160px]">
         <h2 className="text-[#343434] font-bold text-xl lg:text-4xl leading-[38.5px] font-raleway mb-[30px] md:mb-[80px]">
-          <span className=" text-[#ff9619]">П</span>оследние публикации
+          <span className=" text-[#ff9619]">{props.firstLetter}</span>{props.header}
         </h2>
         <Slider {...settings}>
           {filteredCatalog[0].map((item) => {
