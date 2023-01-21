@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import indiv from "../../images/indiv.png";
 import Button from "../button/Button";
 import "./indivMebel.css";
@@ -16,7 +17,7 @@ function IndivMebel() {
             </p>
           </div>
           <div className=" order-3 button-content flex justify-center lg:hidden">
-            <Button text="перейти в КАталог" />
+            <Button text="перейти в КАталог" href="/model-2d" />
           </div>
           <div className=" flex img-content lg:mt-10 lg:-mb-10 w-full">
             <img className=" w-full" src={indiv} alt="" />
@@ -33,14 +34,14 @@ function IndivMebel() {
               производства.
             </p>
             <div className="lg:block hidden mt-[30px]">
-              <a
+              <Link
                 className=" w-fit group bg-[#FF9619] py-[12px] px-[16px]  md:py-[13px] md:px-[20px] duration-200 hover:bg-[#ffffff] hover:text-[#ff9619]  text-[#fff] "
-                href="!#"
+                to="/model-2d"
               >
                 <button className="uppercase font-raleway font-bold">
                   перейти в КАталог
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

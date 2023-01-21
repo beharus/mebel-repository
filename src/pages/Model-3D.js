@@ -18,7 +18,7 @@ function Model3D() {
     <div className="model-3d">
       <InfoDetail />
       <Contact />
-      <LatestPublic />
+      <LatestPublic firstLetter='П' header='охожие товары' />
     </div>
   );
 }
