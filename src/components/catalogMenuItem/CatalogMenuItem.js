@@ -13,14 +13,14 @@ function CatalogMenuItem({ name, image }) {
       : "card-title text-center";
   return (
     <div
-      className="w-full "
+      className="w-full h-full "
       onClick={() => dispatch(setCatalogFilter(name))}
     >
       <div className="card category-item mx-2">
         <div className="">
           <img
             src={require(`../../images/${image}`)}
-            className=" w-full"
+            className=" h-[140px]"
             alt="img"
           />
         </div>

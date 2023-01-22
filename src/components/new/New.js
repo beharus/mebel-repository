@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { filterdCatalogList } from "../../redux/actions";
 import Button from "../button/Button";
+import { Link } from "react-router-dom";
 
 function New() {
   const { catalog, filteredCatalog, catalogFilter, search } = useSelector(
@@ -54,26 +55,28 @@ function New() {
           <Slider {...settings}>
             {filteredCatalog[0].map((item) => {
               return (
-                <div
-                  key={item.id}
-                  className="group px-[11%] cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6"
-                >
-                  <div className="cursor-pointer w-full relative">
-                    <img
-                      src={require(`../../images/${item.image}`)}
-                      className="object-cover w-full"
-                      alt="img"
-                    />
+                <Link to={`/model-3d/${item.name}`}>
+                  <div
+                    key={item.id}
+                    className="group px-[11%] cursor-pointer group category-item lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-6"
+                  >
+                    <div className="cursor-pointer w-full relative">
+                      <img
+                        src={require(`../../images/${item.image}`)}
+                        className="object-cover w-full"
+                        alt="img"
+                      />
+                    </div>
+                    <div className="card-footer">
+                      <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
+                        {item.name}
+                      </h5>
+                      <h5 className=" font-openSans font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#ff9619] mt-[5px] card-title text-center">
+                        {item.price} UAH
+                      </h5>
+                    </div>
                   </div>
-                  <div className="card-footer">
-                    <h5 className=" font-raleway font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#343434] mt-[22px] card-title text-center">
-                      {item.name}
-                    </h5>
-                    <h5 className=" font-openSans font-medium text-lg leading-[22px] uppercase duration-200 group-hover:text-[#ff9619] text-[#ff9619] mt-[5px] card-title text-center">
-                      {item.price} UAH
-                    </h5>
-                  </div>
-                </div>
+                </Link>
               );
             })}
           </Slider>
