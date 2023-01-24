@@ -78,52 +78,128 @@ function InfoDetail() {
       <div className=" mb-[80px] md:mb-[160px] infodetail-carousel max-w-[1460px] mx-auto">
         <Slider {...settings}>
           <div className="">
-            <img
-              className=" py-[5px] px-[5px] xl:mx-auto"
-              src={require("../../images/infodetails-img1.png")}
-              alt=""
-            />
-            <img
-              className=" py-[5px] px-[5px] "
-              src={require("../../images/infodetails-img1.png")}
-              alt=""
-            />
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img className="" src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] xl:mx-auto"
+                src={require("../../images/infodetails-img1.png")}
+                alt=""
+              />
+            </button>
+
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] "
+                src={require("../../images/infodetails-img1.png")}
+                alt=""
+              />
+            </button>
           </div>
           <div className="">
-            <img
-              className=" py-[5px] px-[5px] xl:mx-auto"
-              src={require("../../images/infodetails-img2.png")}
-              alt=""
-            />
-            <img
-              className=" py-[5px] px-[5px] "
-              src={require("../../images/infodetails-img2.png")}
-              alt=""
-            />
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] xl:mx-auto"
+                src={require("../../images/infodetails-img2.png")}
+                alt=""
+              />
+            </button>
+
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] "
+                src={require("../../images/infodetails-img2.png")}
+                alt=""
+              />
+            </button>
           </div>
           <div className="">
-            <img
-              className=" py-[5px] px-[5px] xl:mx-auto"
-              src={require("../../images/infodetails-img3.png")}
-              alt=""
-            />
-            <img
-              className=" py-[5px] px-[5px] "
-              src={require("../../images/infodetails-img3.png")}
-              alt=""
-            />
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] xl:mx-auto"
+                src={require("../../images/infodetails-img3.png")}
+                alt=""
+              />
+            </button>
+
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] "
+                src={require("../../images/infodetails-img3.png")}
+                alt=""
+              />
+            </button>
           </div>
           <div className="">
-            <img
-              className=" py-[5px] px-[5px] xl:mx-auto"
-              src={require("../../images/infodetails-img4.png")}
-              alt=""
-            />
-            <img
-              className=" py-[5px] px-[5px] "
-              src={require("../../images/infodetails-img4.png")}
-              alt=""
-            />
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] xl:mx-auto"
+                src={require("../../images/infodetails-img4.png")}
+                alt=""
+              />
+            </button>
+
+            <button
+              className="group relative"
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modals"
+            >
+              <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
+                <img src={require('../../images/plus.png')} alt="" />
+              </div>
+              <img
+                className=" py-[5px] px-[5px] "
+                src={require("../../images/infodetails-img4.png")}
+                alt=""
+              />
+            </button>
           </div>
         </Slider>
       </div>
