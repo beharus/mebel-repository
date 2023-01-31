@@ -8,6 +8,14 @@ function InfoDetail() {
   const { infoDetail } = useSelector((state) => state.catalog);
   const { name, image, collection, price, description } = infoDetail;
 
+  const settingsModal = {
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    swipeToSlide: true
+  };
+
   const settings = {
     speed: 500,
     slidesToShow: 4,
@@ -80,11 +88,15 @@ function InfoDetail() {
           <div className="">
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
-              data-bs-toggle="modals"
+              data-bs-target="#exampleModalToggle1"
+              data-bs-toggle="modal"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img className="" src={require('../../images/plus.png')} alt="" />
+                <img
+                  className=""
+                  src={require("../../images/plus.png")}
+                  alt=""
+                />
               </div>
               <img
                 className=" py-[5px] px-[5px] xl:mx-auto"
@@ -95,11 +107,11 @@ function InfoDetail() {
 
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle2"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] "
@@ -111,11 +123,11 @@ function InfoDetail() {
           <div className="">
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle3"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] xl:mx-auto"
@@ -126,11 +138,11 @@ function InfoDetail() {
 
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle4"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] "
@@ -142,11 +154,11 @@ function InfoDetail() {
           <div className="">
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle5"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] xl:mx-auto"
@@ -157,11 +169,11 @@ function InfoDetail() {
 
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle6"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] "
@@ -173,11 +185,11 @@ function InfoDetail() {
           <div className="">
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle7"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] xl:mx-auto"
@@ -188,11 +200,11 @@ function InfoDetail() {
 
             <button
               className="group relative"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle8"
               data-bs-toggle="modals"
             >
               <div className=" absolute w-full h-full duration-300 group-hover:flex justify-center items-center hidden bg-[#000000a2]">
-                <img src={require('../../images/plus.png')} alt="" />
+                <img src={require("../../images/plus.png")} alt="" />
               </div>
               <img
                 className=" py-[5px] px-[5px] "
@@ -202,7 +214,44 @@ function InfoDetail() {
             </button>
           </div>
         </Slider>
+
+        {/* ================================      MODAL_SLAYSER    =========================================== */}
+        <div
+          className="modal modal-lg fade"
+          id="exampleModalToggle1"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1"
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content bg-none modal-slayder">
+              <Slider {...settingsModal}>
+                <img
+                  className=" w-full"
+                  src={require("../../images/infodetails-img1.png")}
+                  alt=""
+                />
+                <img
+                  className=" w-full"
+                  src={require("../../images/infodetails-img2.png")}
+                  alt=""
+                />
+                <img
+                  className=" w-full"
+                  src={require("../../images/infodetails-img3.png")}
+                  alt=""
+                />
+                <img
+                  className=" w-full"
+                  src={require("../../images/infodetails-img4.png")}
+                  alt=""
+                />
+              </Slider>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div className=" container mx-auto mb-[160px]">
         <div className=" flex flex-wrap w-full">
           <a

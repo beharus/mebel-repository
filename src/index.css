@@ -27,6 +27,8 @@
 }
 .news-carousel .slick-prev:before,
 .news-carousel .slick-next:before,
+.modal-slayder .slick-prev:before,
+.modal-slayder .slick-next:before,
 .latest-public .slick-prev:before,
 .latest-public .slick-next:before,
 .catalog-menu .slick-next:before,
@@ -49,6 +51,29 @@
   font-weight: 900;
   content: "\f104";
   margin-right: 20px;
+}
+
+.modal-slayder .slick-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  color: white;
+  font-size: 40px;
+  padding: 10px 20px;
+  margin-right: -40px;
+  background: rgba(0, 0, 0, 0.33);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.modal-slayder .slick-prev:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  color: white;
+  font-size: 40px;
+  padding: 10px 20px;
+  margin-left: -40px;
+  background: rgba(0, 0, 0, 0.33);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .news-carousel .slick-next:before,
